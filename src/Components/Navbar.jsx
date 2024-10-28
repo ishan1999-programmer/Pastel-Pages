@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
+import {Link} from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar({setGenre , searchValue , setSearchValue}) {
   let [searchBarOpen, setSearchBarOpen] = useState(false);
   let [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
   let inputRef = useRef(null);
@@ -16,10 +17,10 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <a className="navbar-logo" href="">
+      <Link className="navbar-logo" to="/" onClick={() => setGenre("")}>
         <img src="./public/logo.svg" id="logo" />
         <h1>Pastel Pages</h1>
-      </a>
+      </Link>
       <div className="navbar-content">
         <div className="search">
           <img
@@ -35,7 +36,8 @@ export default function Navbar() {
             className={
               searchBarOpen ? "search-bar search-bar-open" : "search-bar"
             }
-            onBlur={() => setSearchBarOpen(false)}
+            value={searchValue}
+            onChange={(e)=>setSearchValue(e.target.value)}
             placeholder="Search for books..."
             ref={inputRef}
           />
@@ -54,26 +56,53 @@ export default function Navbar() {
             }
           >
             <ul className="genres">
-              <li>Crime</li>
-              <li>Fantasy</li>
-              <li>Fiction</li>
-              <li>Horror</li>
-              <li>Mystery</li>
-              <li>Romance</li>
-              <li>Science Fiction</li>
-              <li>Self Help</li>
-              <li>Suspense</li>
-              <li>Thriller</li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("fantasy")}>
+                  Fantasy
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("horror")}>
+                  Horror
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("mystery")}>
+                  Mystery
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("romance")}>
+                  Romance
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("scifi")}>
+                  Science Fiction
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("selfhelp")}>
+                  Self Help
+                </Link>
+              </li>
+              <li>
+                <Link to="/genre" onClick={() => setGenre("thriller")}>
+                  Thriller
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
-        <div>About</div>
-        <div>
+        <Link to="/about" onClick={() => setGenre("")}>
+          About
+        </Link>
+        <Link to="/cart" onClick={() => setGenre("")}>
           <img src="./public/cart.svg" alt="" />
-        </div>
-        <div>
+        </Link>
+        <Link to="/createAccount" onClick={() => setGenre("")}>
           <img src="./public/user.svg" alt="" />
-        </div>
+        </Link>
       </div>
     </div>
   );
