@@ -1,23 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Book = ({ title, bookCover,id}) => {
-    const { op, dp } = generatePrices(id);
+const Book = ({ title, bookCover,id,writer}) => {
+  const { op, dp } = generatePrices(id);
   return (
-    <div class="book-card">
+    <div className="book-card">
       <div className="book-image-box">
-        <img src={bookCover} alt="" className="book-image" />
+        <img
+          src={bookCover ? bookCover : "no-image.jpg"}
+          alt=""
+          className="book-image"
+        />
       </div>
-      <p className="book-title">
-        {title}
-      </p>
+      <div className="book-info">
+        <p className="book-title">{title}</p>
+        <p className="book-writer">{writer}</p>
+      </div>
       <div className="book-price">
-        <p className="book-price-original"> &#8377;799</p>
-        <p className="book-price-current">&#8377;538</p>
-      </div>
-      <div className="book-quantity">
-        <button type="button">-</button>
-        <p>1</p>
-        <button type="button">+</button>
+        <p className="book-price-original"> &#8377;{op}</p>
+        <p className="book-price-current">&#8377;{dp}</p>
       </div>
       <button type="button" className="add-to-cart-button">
         <img src="cart.svg" alt="" />

@@ -1,19 +1,9 @@
 import { useRef, useState } from "react";
-import {Link} from "react-router-dom"
+import { Link, redirect } from "react-router-dom";
 
-export default function Navbar({setGenre , searchValue , setSearchValue}) {
-  let [searchBarOpen, setSearchBarOpen] = useState(false);
+export default function Navbar({ setGenre, setSearchValue }) {
   let [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
-  let inputRef = useRef(null);
-
-  function handleClick() {
-    if (!searchBarOpen) {
-      setSearchBarOpen(true);
-      inputRef.current.focus();
-    } else {
-      setSearchBarOpen(false);
-    }
-  }
+  let [inputValue, setInputValue] = useState("");
 
   return (
     <div className="navbar">
@@ -23,24 +13,27 @@ export default function Navbar({setGenre , searchValue , setSearchValue}) {
       </Link>
       <div className="navbar-content">
         <div className="search">
-          <img
-            src="./public/search.svg"
-            alt=""
-            className={
-              searchBarOpen ? "search-icon search-icon-open" : "search-icon"
-            }
-            onClick={handleClick}
-          />
           <input
             type="text"
-            className={
-              searchBarOpen ? "search-bar search-bar-open" : "search-bar"
-            }
-            value={searchValue}
-            onChange={(e)=>setSearchValue(e.target.value)}
+            className="search-bar"
             placeholder="Search for books..."
-            ref={inputRef}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.code === "Enter") {
+                setSearchValue(inputValue);
+              } else {
+                return;
+              }
+            }}
           />
+          <Link
+            to={inputValue ? "/search" : "/"}
+            className="search-icon-box"
+            onClick={() => setSearchValue(inputValue)}
+          >
+            <img src="./public/search.svg" alt="" className="search-icon" />
+          </Link>
         </div>
         <div
           className="genre-box"
@@ -97,7 +90,8 @@ export default function Navbar({setGenre , searchValue , setSearchValue}) {
         <Link to="/about" onClick={() => setGenre("")}>
           About
         </Link>
-        <Link to="/cart" onClick={() => setGenre("")}>
+        <Link className="cart-box" to="/cart" onClick={() => setGenre("")}>
+          <div className="cart-circle">1</div>
           <img src="./public/cart.svg" alt="" />
         </Link>
         <Link to="/createAccount" onClick={() => setGenre("")}>
