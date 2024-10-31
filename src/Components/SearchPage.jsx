@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Book from "./Book";
+import CartItem from "./CartItem";
 
-const SearchPage = ({ searchValue }) => {
+const SearchPage = ({ searchValue, setCartItems, cartItems }) => {
   let [searchedBooks, setSearchedBooks] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
 
+  
   useEffect(() => {
     if (searchValue) {
       search();
@@ -18,19 +20,20 @@ const SearchPage = ({ searchValue }) => {
         `https://www.googleapis.com/books/v1/volumes?q=${searchValue}&key=AIzaSyCZ4Q5HkhNAMgIBF7fRhrhNxE0pvAgeJPA`
       );
       let jsonData = await data.json();
-      console.log(jsonData);
       setSearchedBooks(
         jsonData.items
           .filter((val) => val.volumeInfo.title.length < 50)
-          .map((val) => (
-            <Book
-              key={val.id}
-              id={val.id}
-              title={val.volumeInfo.title}
-              bookCover={("imageLinks" in val.volumeInfo) ? val.volumeInfo.imageLinks.thumbnail : undefined}
-              writer = {val.volumeInfo.authors[0]}
-            />
-          ))
+          .map((val) => {
+            return {
+              id: val.id,
+              title: val.volumeInfo.title,
+              writer: val.volumeInfo.authors[0],
+              bookCover:
+                "imageLinks" in val.volumeInfo
+                  ? val.volumeInfo.imageLinks.thumbnail
+                  : undefined,
+            };
+          })
       );
       setIsLoading(false);
     } catch (error) {
@@ -45,7 +48,22 @@ const SearchPage = ({ searchValue }) => {
           <div className="loading-page-spinner"></div>
         </div>
       ) : (
-        searchedBooks
+        searchedBooks.map((val) => {
+          let { op, dp } = generatePrices(val.id);
+          return (
+            <Book
+              key={val.id}
+              id={val.id}
+              title={val.title}
+              bookCover={val.bookCover}
+              writer={val.writer}
+              originalPrice={op}
+              discountedPrice={dp}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          );
+        })
       )}
     </div>
   );
@@ -53,3 +71,31 @@ const SearchPage = ({ searchValue }) => {
 
 export default SearchPage;
 
+let generatePrices = (bookId) => {
+  const basePrice = 500 + (parseInt(bookId, 36) % 501);
+  const discount = Math.floor(basePrice * 0.2);
+  const discountedPrice = basePrice - discount;
+
+  return {
+    op: String(basePrice),
+    dp: String(discountedPrice),
+  };
+};
+
+/* 
+let { op, dp } = generatePrices(val.id);
+<Book
+                key={val.id}
+                id={val.id}
+                title={val.volumeInfo.title}
+                bookCover={
+                  "imageLinks" in val.volumeInfo
+                    ? val.volumeInfo.imageLinks.thumbnail
+                    : undefined
+                }
+                writer={val.volumeInfo.authors[0]}
+                originalPrice={op}
+                discountedPrice={dp}
+                cartItems = {cartItems}
+                setCartItems={setCartItems}
+              />*/

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Link, redirect } from "react-router-dom";
 
-export default function Navbar({ setGenre, setSearchValue }) {
+export default function Navbar({ setGenre, setSearchValue,cartSize }) {
   let [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
   let [inputValue, setInputValue] = useState("");
 
@@ -91,7 +91,7 @@ export default function Navbar({ setGenre, setSearchValue }) {
           About
         </Link>
         <Link className="cart-box" to="/cart" onClick={() => setGenre("")}>
-          <div className="cart-circle">1</div>
+          <div className="cart-circle" style={{ opacity: `${cartSize ? 1 : 0}`}}>{ cartSize}</div>
           <img src="./public/cart.svg" alt="" />
         </Link>
         <Link to="/createAccount" onClick={() => setGenre("")}>

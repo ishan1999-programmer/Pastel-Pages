@@ -1,7 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const Book = ({ title, bookCover,id,writer}) => {
-  const { op, dp } = generatePrices(id);
+const Book = ({
+  id,
+  title,
+  writer,
+  bookCover,
+  originalPrice,
+  discountedPrice,
+  setCartItems,
+  cartItems,
+}) => {
+  console.log(cartItems);
+  
   return (
     <div className="book-card">
       <div className="book-image-box">
@@ -16,26 +26,38 @@ const Book = ({ title, bookCover,id,writer}) => {
         <p className="book-writer">{writer}</p>
       </div>
       <div className="book-price">
-        <p className="book-price-original"> &#8377;{op}</p>
-        <p className="book-price-current">&#8377;{dp}</p>
+        <p className="book-price-original"> &#8377;{originalPrice}</p>
+        <p className="book-price-current">&#8377;{discountedPrice}</p>
       </div>
-      <button type="button" className="add-to-cart-button">
-        <img src="cart.svg" alt="" />
-        <p>Add to cart</p>
+      <button
+        disabled={cartItems.some((val) => val.id === id)}
+        type="button"
+        className="add-to-cart-button"
+        onClick={() =>
+          setCartItems((cartItems) => [
+            ...cartItems,
+            {
+              id: id,
+              title: title,
+              writer: writer,
+              bookCover: bookCover,
+              discountedPrice: discountedPrice,
+              totalPrice: discountedPrice
+            },
+          ])
+        }
+      >
+        {!cartItems.some((val) => val.id === id) ? (
+          <div className="add-to-cart-box">
+            <img src="cart.svg" alt="" />
+            <p>Add to cart</p>
+          </div>
+        ) : (
+          <div className="added-to-cart-box">Item Added</div>
+        )}
       </button>
     </div>
   );
-}
-
-const generatePrices = (bookId) => {
-  const basePrice = 500 + (parseInt(bookId, 36) % 501); 
-  const discount = Math.floor(basePrice * 0.2);
-  const discountedPrice = basePrice - discount;
-
-  return {
-    op: String(basePrice),
-    dp: String(discountedPrice)
-  };
 };
 
-export default Book
+export default Book;

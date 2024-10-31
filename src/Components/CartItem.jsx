@@ -1,27 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-const CartItem = () => {
+const CartItem = ({ id, title, writer, bookCover, discountedPrice,handleRemove,changeTotalPrice}) => {
+  let [cartItemQuantity, setCartItemQuantity] = useState(1);
   return (
     <div className="cart-item">
       <div className="cart-item-left">
         <div className="cart-item-image-box">
-          <img src="" alt="" />
+          <img src={bookCover ? bookCover : "no-image.jpg"} alt="" />
         </div>
         <div className="cart-item-details-box">
-          <p className="title"> Title</p>
-          <p className="writer">Author</p>
+          <p className="title"> {title}</p>
+          <p className="writer">{writer}</p>
           <div className="cart-item-quantity">
-            <button>-</button>
-            <p>1</p>
-            <button>+</button>
+            <button
+              onClick={() => {
+                if (cartItemQuantity > 1) {
+                  changeTotalPrice(id, cartItemQuantity - 1);
+                  setCartItemQuantity(cartItemQuantity - 1);
+                }
+              }}
+            >
+              -
+            </button>
+            <p>{cartItemQuantity}</p>
+            <button onClick={() => {
+              changeTotalPrice(id,cartItemQuantity+1)
+              setCartItemQuantity(cartItemQuantity + 1)
+            }}>
+              +
+            </button>
           </div>
-          <button className="remove-button">Remove</button>
+          <button className="remove-button" onClick={()=>handleRemove(id)}>Remove</button>
         </div>
       </div>
       <div className="cart-item-right">
-        <p className="price">&#8377;999</p>
-        <p className="quantity">10</p>
-        <p className="total-price">&#8377;9990</p>
+        <p className="price">&#8377;{discountedPrice}</p>
+        <p className="quantity">{cartItemQuantity}</p>
+        <p className="total-price">
+          &#8377;{discountedPrice * cartItemQuantity}
+        </p>
       </div>
     </div>
   );

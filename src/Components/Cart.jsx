@@ -1,7 +1,9 @@
 import React from "react";
 import CartItem from "./CartItem";
 
-const Cart = () => {
+const Cart = ({ cartItems, handleRemove,changeTotalPrice }) => {
+  let subtotal = 0;
+  cartItems.forEach((val) => (subtotal = subtotal + Number(val.totalPrice)));
   return (
     <div className="cart">
       <div className="cart-content">
@@ -20,7 +22,18 @@ const Cart = () => {
                 </div>
               </div>
               <div className="cart-content-box-left-inner-down">
-                <CartItem />
+                {cartItems.map((val) => (
+                  <CartItem
+                    handleRemove={handleRemove}
+                    key={val.id}
+                    id={val.id}
+                    title={val.title}
+                    writer={val.writer}
+                    bookCover={val.bookCover}
+                    discountedPrice={val.discountedPrice}
+                    changeTotalPrice = {changeTotalPrice}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -30,7 +43,7 @@ const Cart = () => {
               <div className="subtotal-box">
                 <div className="subtotal">
                   <p>Subtotal:</p>
-                  <p>&#8377;700</p>
+                  <p>&#8377;{ subtotal}</p>
                 </div>
                 <div className="delivery-charge">
                   <p>Delivery:</p>
@@ -39,7 +52,7 @@ const Cart = () => {
               </div>
               <div className="final-amount-box">
                 <p className="final-amount">Total:</p>
-                <p>&#8377;800</p>
+                <p>&#8377;{ subtotal+100}</p>
               </div>
               <button type="button" className="pay-button">
                 Proceed to Pay
