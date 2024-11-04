@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import Book from "./Book";
 import CartItem from "./CartItem";
 
-const SearchPage = ({ searchValue, setCartItems, cartItems }) => {
+const SearchPage = ({ searchValue, setCartItems, cartItems,handleRemove }) => {
   let [searchedBooks, setSearchedBooks] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
-
+  console.log(searchedBooks);
   
+
   useEffect(() => {
     if (searchValue) {
       search();
@@ -61,6 +62,7 @@ const SearchPage = ({ searchValue, setCartItems, cartItems }) => {
               discountedPrice={dp}
               cartItems={cartItems}
               setCartItems={setCartItems}
+              handleRemove={handleRemove}
             />
           );
         })
@@ -72,7 +74,9 @@ const SearchPage = ({ searchValue, setCartItems, cartItems }) => {
 export default SearchPage;
 
 let generatePrices = (bookId) => {
-  const basePrice = 500 + (parseInt(bookId, 36) % 501);
+  const sanitizedId = bookId.replace(/[^a-zA-Z0-9]/g, "");
+  const numericId = Math.abs(parseInt(sanitizedId, 36) || 0);
+  const basePrice = 500 + (numericId % 501);
   const discount = Math.floor(basePrice * 0.2);
   const discountedPrice = basePrice - discount;
 
@@ -82,20 +86,3 @@ let generatePrices = (bookId) => {
   };
 };
 
-/* 
-let { op, dp } = generatePrices(val.id);
-<Book
-                key={val.id}
-                id={val.id}
-                title={val.volumeInfo.title}
-                bookCover={
-                  "imageLinks" in val.volumeInfo
-                    ? val.volumeInfo.imageLinks.thumbnail
-                    : undefined
-                }
-                writer={val.volumeInfo.authors[0]}
-                originalPrice={op}
-                discountedPrice={dp}
-                cartItems = {cartItems}
-                setCartItems={setCartItems}
-              />*/

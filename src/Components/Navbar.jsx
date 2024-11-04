@@ -1,9 +1,16 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, redirect } from "react-router-dom";
 
 export default function Navbar({ setGenre, setSearchValue,cartSize }) {
   let [genreDropdownOpen, setGenreDropdownOpen] = useState(false);
-  let [inputValue, setInputValue] = useState("");
+  let [inputValue, setInputValue] = useState(() => {
+    let storedInputValue = localStorage.getItem("inputValue");
+    return storedInputValue ? storedInputValue : "";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("inputValue", inputValue);
+  }, [inputValue]);
 
   return (
     <div className="navbar">
@@ -14,13 +21,15 @@ export default function Navbar({ setGenre, setSearchValue,cartSize }) {
       <div className="navbar-content">
         <div className="search">
           <input
-            type="text"
+            type="search"
             className="search-bar"
             placeholder="Search for books..."
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => {
-              if (e.code === "Enter") {
+              
+              
+              if (e.key === "Enter") {
                 setSearchValue(inputValue);
               } else {
                 return;

@@ -9,9 +9,10 @@ const Book = ({
   discountedPrice,
   setCartItems,
   cartItems,
+  handleRemove
 }) => {
-  console.log(cartItems);
-  
+  let isAdded = cartItems.some((val) => val.id === id);
+
   return (
     <div className="book-card">
       <div className="book-image-box">
@@ -30,31 +31,32 @@ const Book = ({
         <p className="book-price-current">&#8377;{discountedPrice}</p>
       </div>
       <button
-        disabled={cartItems.some((val) => val.id === id)}
         type="button"
-        className="add-to-cart-button"
-        onClick={() =>
-          setCartItems((cartItems) => [
-            ...cartItems,
-            {
-              id: id,
-              title: title,
-              writer: writer,
-              bookCover: bookCover,
-              discountedPrice: discountedPrice,
-              totalPrice: discountedPrice
-            },
-          ])
+        className={
+          isAdded ? "add-to-cart-button item-added" : "add-to-cart-button "
+        }
+        onClick={() => {
+          if (!isAdded) {
+            setCartItems((cartItems) => [
+              ...cartItems,
+              {
+                id: id,
+                title: title,
+                writer: writer,
+                bookCover: bookCover,
+                discountedPrice: discountedPrice,
+                quantity:1
+              },
+            ])
+          }
+          else {
+            handleRemove(id);
+          }
+        }
         }
       >
-        {!cartItems.some((val) => val.id === id) ? (
-          <div className="add-to-cart-box">
-            <img src="cart.svg" alt="" />
-            <p>Add to cart</p>
-          </div>
-        ) : (
-          <div className="added-to-cart-box">Item Added</div>
-        )}
+        {!isAdded && <img src="cart.svg" alt="" />}
+        <p>{isAdded ? "Added to Cart" : "Add to Cart"}</p>
       </button>
     </div>
   );
