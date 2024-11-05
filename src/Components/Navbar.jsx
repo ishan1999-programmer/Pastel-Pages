@@ -19,31 +19,7 @@ export default function Navbar({ setGenre, setSearchValue,cartSize }) {
         <h1>Pastel Pages</h1>
       </Link>
       <div className="navbar-content">
-        <div className="search">
-          <input
-            type="search"
-            className="search-bar"
-            placeholder="Search for books..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={(e) => {
-              
-              
-              if (e.key === "Enter") {
-                setSearchValue(inputValue);
-              } else {
-                return;
-              }
-            }}
-          />
-          <Link
-            to={inputValue ? "/search" : "/"}
-            className="search-icon-box"
-            onClick={() => setSearchValue(inputValue)}
-          >
-            <img src="./public/search.svg" alt="" className="search-icon" />
-          </Link>
-        </div>
+        <Link to="/" className="home">Home</Link>
         <div
           className="genre-box"
           onMouseEnter={() => setGenreDropdownOpen(true)}

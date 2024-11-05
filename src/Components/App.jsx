@@ -60,7 +60,7 @@ export default function App() {
             setSearchValue={setSearchValue}
             cartSize={cartSize}
           />
-          <HomePage />
+          <HomePage setSearchValue={setSearchValue}  />
         </>
       ),
     },

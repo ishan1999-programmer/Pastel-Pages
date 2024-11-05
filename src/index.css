@@ -3,22 +3,24 @@
   padding: 0px;
   box-sizing: border-box;
   text-decoration: none;
+  outline: none;
 }
 
 :root {
   height: 100vh;
+  background-color: #F9F9F9;
 }
 
 .navbar {
   position: fixed;
   width: 100%;
   height: 75px;
-  background-color: hsl(32, 100%, 92%);
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   z-index: 20;
+  background-color: #F8EAD8;
+  opacity: 1;
 }
 
 #logo {
@@ -50,47 +52,15 @@
 .navbar-content > * {
   cursor: pointer;
   font-family: "poppins";
-  color: hsl(16, 9%, 50%);
+  color: hsl(0, 13%, 49%);
   font-size: 1.2rem;
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
-.navbar-content > :not(:first-child):hover {
-  background-color: rgba(255, 218, 185, 0.587);
-}
-
-.search-icon-box {
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-icon {
-  transition: all 0.3s ease;
-}
-
-.search-icon-box:hover {
-  background-color: rgba(255, 218, 185, 0.587);
-}
-
-.search {
-  display: flex;
-  gap: 3.5px;
-  align-items: center;
-}
-.search-bar {
-  border: none;
-  height: 35px;
-  width: 250px;
-  font-family: "poppins";
-  color: #8c7b75;
-  font-size: 1rem;
-  border-radius: 8px;
-  padding: 10px 15px;
+.navbar-content > *:hover {
+  background-color: #F3C5C5;
 }
 
 .genre-box {
@@ -106,7 +76,7 @@
   width: 200px;
   top: 100%;
   left: -50%;
-  background-color: hsl(28, 100%, 90%);
+  background-color: #f3c5c5;
   transition: all 0.3s ease;
   z-index: 10;
   opacity: 0;
@@ -136,18 +106,11 @@
   color: hsl(16, 9%, 10%);
 }
 
-.homepage {
-  height: 100vh;
-  width: 100vw;
-  background-color: peachpuff;
-}
-
 .searchpage {
   padding: 120px 30px;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  background-color: #fdfaf6;
 }
 
 .book-card {
@@ -302,7 +265,7 @@
 .cart {
   min-height: 100vh;
   padding-top: 150px;
-  background-color: #fdfaf6;
+  
 }
 
 .cart-content {
@@ -609,7 +572,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fdfaf6;
   padding: 20px;
   padding-top: 100px;
 }
@@ -693,7 +655,6 @@
   align-items: center;
   padding: 10px;
   padding-top: 100px;
-  background-color: #fdfaf6;
 }
 
 .create-account-form {
@@ -890,4 +851,79 @@
   color: #e5707e;
 }
 
+.homepage{
+  padding-top: 75px;
+  height: 500vh;
+}
 
+
+.hero-section{
+  padding: 100px 20px;
+  min-height: 500px;
+  background-image: url("hero-image.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-section-content{
+  max-width: 1500px;
+  margin: auto;
+}
+
+
+.hero-section h1 {
+  font-family: "Allura", cursive;
+  color: hsl(348, 23%, 45%);
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero-section p {
+  font-family: "poppins";
+  color: hsl(0, 13%, 39%);
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+.searchbar-box {
+  width: 550px;
+  height: 50px;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.searchbar-box input {
+  border: none;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 5px 15px;
+  font-size: 1.4rem;
+  width: 400px;
+  color: #FF9494;
+}
+
+.search {
+  font-family: "poppins";
+  font-size: 1.5rem;
+  color: hsl(0, 13%, 39%);
+  background-color: #ffb4b4;
+  padding: 3px 10px;
+  border-radius: 20px;
+  width: 120px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.search:hover {
+  background-color: hsl(0, 100%, 75%);
+  transform: scale(1.1);
+}
