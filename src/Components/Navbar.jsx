@@ -60,11 +60,6 @@ export default function Navbar({ setGenre, setSearchValue,cartSize }) {
                 </Link>
               </li>
               <li>
-                <Link to="/genre" onClick={() => setGenre("selfhelp")}>
-                  Self Help
-                </Link>
-              </li>
-              <li>
                 <Link to="/genre" onClick={() => setGenre("thriller")}>
                   Thriller
                 </Link>

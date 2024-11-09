@@ -27,27 +27,28 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem("searchValue", searchValue);
-  },[searchValue])
+  }, [searchValue]);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
-  
+
   let cartSize = cartItems.length;
 
   function handleRemove(itemID) {
     setCartItems(cartItems.filter((val) => val.id != itemID));
   }
 
-  function changeQuantity(itemID,newQuantity) {
-    setCartItems(cartItems.map((val) => {
-      if (val.id === itemID) {
-        return {...val , quantity: newQuantity}
-      }
-      else {
-        return val;
-      }
-    }))
+  function changeQuantity(itemID, newQuantity) {
+    setCartItems(
+      cartItems.map((val) => {
+        if (val.id === itemID) {
+          return { ...val, quantity: newQuantity };
+        } else {
+          return val;
+        }
+      })
+    );
   }
 
   let router = createBrowserRouter([
@@ -60,7 +61,7 @@ export default function App() {
             setSearchValue={setSearchValue}
             cartSize={cartSize}
           />
-          <HomePage setSearchValue={setSearchValue}  />
+          <HomePage setSearchValue={setSearchValue} setGenre={setGenre} />
         </>
       ),
     },
@@ -77,7 +78,7 @@ export default function App() {
             searchValue={searchValue}
             setCartItems={setCartItems}
             cartItems={cartItems}
-            handleRemove = {handleRemove}
+            handleRemove={handleRemove}
           />
         </>
       ),
@@ -122,7 +123,7 @@ export default function App() {
             setCartItems={setCartItems}
             handleRemove={handleRemove}
             changeQuantity={changeQuantity}
-            cartSize = {cartSize}
+            cartSize={cartSize}
           />
         </>
       ),

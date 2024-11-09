@@ -868,8 +868,10 @@
 .hero-section-content{
   max-width: 1500px;
   margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
-
 
 .hero-section h1 {
   font-family: "Allura", cursive;
@@ -878,6 +880,10 @@
   font-size: 5rem;
   margin-bottom: 10px;
   font-weight: 600;
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slideInLeft 1.5s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .hero-section p {
@@ -886,6 +892,10 @@
   text-align: center;
   font-size: 1.3rem;
   margin-bottom: 50px;
+  transform: translateX(100px);
+  opacity: 0;
+  animation: slideInRight 1.5s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .searchbar-box {
@@ -894,10 +904,13 @@
   border-radius: 30px;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.8);
   display: flex;
   align-items: center;
   background-color: white;
+  opacity: 0;
+  animation: growIn 1.5s ease forwards;
+  animation-delay: 0.7s;
 }
 
 .searchbar-box input {
@@ -927,3 +940,231 @@
   background-color: hsl(0, 100%, 75%);
   transform: scale(1.1);
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes growIn {
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.book-card-homepage{
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #F4BFBF;
+}
+
+.book-card-image-box{
+  height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.book-card-image-box img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.book-card-details-box{
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #F8EAD8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.book-card-title{
+  font-family: "poppins";
+  color: #c96868;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.book-card-writer{
+  font-family: "poppins";
+  color: #54bab9;
+  text-align: center;
+}
+
+.book-card-genre{
+  font-family: "poppins";
+  background-color: #f3c5c5;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  left: 30%;
+}
+
+.book-card-rating{
+  font-family: "poppins";
+  color: #8f6d6d;
+  position: relative;
+  left: 35%;
+  background-color: #d1e9f6;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.bestsellers-section,.recommendation-section,.explore-genres-section{
+  padding-top: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bestsellers-content,.recommendation-content,.explore-genres-content{
+  max-width: 1500px;
+  margin: auto;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.717);
+  
+}
+
+.explore-genres-content{
+  max-width: 1200px;
+}
+
+.bestsellers-content h1,.recommendation-content h1,.explore-genres-content h1{
+  font-family: "Allura", cursive;
+  color: #8d5863;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.explore-genres-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,160px);
+  gap: 20px;
+}
+
+.genres-homepage{
+  cursor: pointer;
+  padding: 20px 5px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.684);
+}
+
+.genres-homepage:hover{
+  transform: scale(1.05);
+}
+
+.genres-homepage>:first-child{
+  font-family: "poppins";
+  color: #8d5863;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.genres-homepage>:nth-child(2){
+  font-family: "poppins";
+  color: #8f6d6d;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.fantasy{
+  background-color: #C9E9D2;
+}
+
+.fantasy:hover{
+  background-color: hsl(137, 42%, 77%);
+}
+
+.horror{
+  background-color: #DBB5B5;
+}
+
+.horror:hover{
+  background-color: hsl(0, 35%, 70%);
+}
+
+.scifi{
+  background-color: #D2E0FB;
+}
+
+.scifi:hover{
+  background-color: hsl(220, 84%, 82%);
+}
+
+.romance{
+  background-color: #FF9B9B;
+}
+
+.romance:hover{
+  background-color: hsl(0, 100%, 72%);
+}
+
+.mystery{
+  background-color: #FFC6AC;
+}
+
+.mystery:hover{
+  background-color: hsl(19, 100%, 76%);
+}
+
+.thriller{
+  background-color: #FFF6E3;
+}
+
+.thriller:hover{
+  background-color: hsl(41, 100%, 87%);
+}
+
+@media (width<=803px) {
+  .explore-genres-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .explore-genres-content h1{
+    font-size: 3.5rem;
+  }
+}
+
+@media (width<=545px) {
+  .explore-genres-grid{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+  }
+  
+}
+
+.current-genre{
+  padding-top: 100px;
+}
+
+
+
