@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 
-const HomePage = ({ setSearchValue,setGenre }) => {
+const HomePage = ({ setSearchValue, setGenre }) => {
   let [inputValue, setInputValue] = useState("");
   return (
     <div className="homepage">
@@ -212,30 +212,176 @@ const HomePage = ({ setSearchValue,setGenre }) => {
         <div className="explore-genres-content">
           <h1>Genres to Suit Every Mood</h1>
           <div className="explore-genres-grid">
-            <Link to = "/genre" onClick={()=>setGenre("fantasy")} className="genres-homepage fantasy">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("fantasy")}
+              className="genres-homepage fantasy"
+            >
               <p>Fantasy 🏰</p>
               <p>Step into realms of wonder and magic.</p>
             </Link>
-            <Link to = "/genre" onClick={()=>setGenre("horror")} className="genres-homepage horror">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("horror")}
+              className="genres-homepage horror"
+            >
               <p>Horror 👻</p>
               <p>Face the chills that linger beyond the shadows.</p>
             </Link>
-            <Link to = "/genre" onClick={()=>setGenre("mystery")} className="genres-homepage mystery">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("mystery")}
+              className="genres-homepage mystery"
+            >
               <p>Mystery 🔎</p>
               <p>Unlock secrets hidden in plain sight.</p>
             </Link>
-            <Link to = "/genre" onClick={()=>setGenre("romance")} className="genres-homepage romance">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("romance")}
+              className="genres-homepage romance"
+            >
               <p>Romance 💖</p>
               <p>Discover tales of hearts entwined.</p>
             </Link>
-            <Link to = "/genre" onClick={()=>setGenre("scifi")} className="genres-homepage scifi">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("scifi")}
+              className="genres-homepage scifi"
+            >
               <p>Sci-fi 👽</p>
               <p>Explore worlds beyond the stars.</p>
             </Link>
-            <Link to = "/genre" onClick={()=>setGenre("thriller")} className="genres-homepage thriller">
+            <Link
+              to="/genre"
+              onClick={() => setGenre("thriller")}
+              className="genres-homepage thriller"
+            >
               <p>Thriller ⏰</p>
               <p>Brace yourself for a heart-pounding journey.</p>
             </Link>
+          </div>
+        </div>
+      </div>
+      <div className="quotes-section">
+        <div className="quotes-content">
+          <h1>Quotes That Inspire...</h1>
+          <div className="quotes-grid">
+            <div className="quotes">
+              <p className="quote">
+                "A room without books is like a body without a soul."
+              </p>
+              <p className="quote-writer">- Marcus Tullius Cicero</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">"Books are a uniquely portable magic."</p>
+              <p className="quote-writer">- Stephen King</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">"So many books, so little time."</p>
+              <p className="quote-writer">- Frank Zappa</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">
+                "Reading is a discount ticket to everywhere."
+              </p>
+              <p className="quote-writer">- Mary Schmich</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">
+                "If you only read the books that everyone else is reading, you
+                can only think what everyone else is thinking."
+              </p>
+              <p className="quote-writer">- Haruki Murakami</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">"There is no friend as loyal as a book."</p>
+              <p className="quote-writer">- Ernest Hemingway</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">"A good book is an event in my life."</p>
+              <p className="quote-writer">- Stendhal</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">"Books were my pass to personal freedom."</p>
+              <p className="quote-writer">- Oprah Winfrey</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">
+                "A book is a dream that you hold in your hand."
+              </p>
+              <p className="quote-writer">- Neil Gaiman</p>
+            </div>
+            <div className="quotes">
+              <p className="quote">
+                "You can never get a cup of tea large enough or a book long
+                enough to suit me."
+              </p>
+              <p className="quote-writer">- C.S. Lewis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="newsletter-section">
+        <div className="newsletter-content">
+          <h1>Stay in the Loop with Bookish News!</h1>
+          <p>
+            Sign up to get book recommendations, reading tips, and cozy vibes
+            delivered to your inbox!
+          </p>
+          <div className="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+            />
+            <button className="newsletter-button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div className="footer-section">
+        <div className="footer-content">
+          <div className="footer-top">
+            <div className="footer-logo">
+              <img src="logo.svg" alt="" />
+              <p>Pastel Pages</p>
+              <p>A cozy corner for book lovers</p>
+            </div>
+            <div className="footer-quick-links">
+              <p>Quick Links</p>
+              <div>
+                <Link to="/">Home</Link>
+                <a href="">Best Sellers</a>
+                <a href="">Recommendations</a>
+                <a href="">Genres</a>
+                <Link to="/about">Contact</Link>
+              </div>
+            </div>
+            <div className="footer-social">
+              <p>Stay Connected</p>
+              <div className="social-links">
+                <a href="">
+                  <img src="facebook-logo.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="instagram-logo.svg" alt="" />
+                </a>
+                <a href="">
+                  <img src="x-logo.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div className="footer-newsletter">
+              <p>Subscribe to our Newsletter</p>
+              <div>
+                <input type="email" placeholder="Enter your email" />
+                <button type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p><a href="">Privacy Policy</a> | <a href="">Terms of Service</a></p>
+            <p>&copy; 2024 - Present Pastel Pages. All rights reserved.</p>
           </div>
         </div>
       </div>
