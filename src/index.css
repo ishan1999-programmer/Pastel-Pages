@@ -1060,7 +1060,7 @@
 }
 
 .quotes-content{
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -1395,4 +1395,100 @@ background-color: hsl(0, 100%, 75%);
   text-decoration: underline;
 }
 
+.about-page{
+  padding: 100px 20px;
+}
+
+.about-page-content{
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f5eee6;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
+}
+
+.about-page-content>:first-child{
+  border-bottom: 0.8px solid #8d5863;
+  padding-bottom: 30px;
+}
+
+.about-heading{
+  font-family: "Allura", cursive;
+  color: #8d5863;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.about-welcome{
+  font-family: "poppins";
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8f6d6d;
+  margin-bottom: 10px;
+}
+
+.about-mission{
+  font-family: "poppins";
+  text-align: center;
+  font-size: 1.1rem;
+  color: #8f6d6d;
+  font-weight: 600;
+}
+
+.contact{
+  padding-top: 30px;
+}
+
+.contact>:first-child{
+  font-family: "poppins";
+  color: #8d5863;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.contact-info p{
+  font-family: "poppins";
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8f6d6d;
+}
+
+.genre-page{
+  padding: 100px 20px;
+}
+
+.genre-content{
+  max-width: 1500px;
+  margin: auto;
+}
+
+.genre-discription-box{
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+  padding-bottom: 100px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.749);
+}
+
+.genre-heading{
+  font-family: "Allura", cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #8d5863;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.genre-discription{
+  font-family: "poppins";
+  font-size: 1.1rem;
+  text-align: center;
+  color: #8f6d6d;
+}
 

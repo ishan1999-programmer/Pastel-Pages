@@ -40,7 +40,10 @@ const HomePage = ({ setSearchValue, setGenre }) => {
         <div className="bestsellers-content">
           <h1>Our Bestsellers</h1>
           <Swiper
-            modules={[FreeMode, Pagination, Navigation]}
+            modules={[FreeMode, Pagination, Navigation, Autoplay]}
+            speed={"4000"}
+            loop={true}
+            autoplay={{ delay: 0 }}
             navigation={true}
             freeMode={true}
             slidesPerView={"1.2"}
@@ -126,7 +129,10 @@ const HomePage = ({ setSearchValue, setGenre }) => {
         <div className="recommendation-content">
           <h1>Recommended For You</h1>
           <Swiper
-            modules={[FreeMode, Pagination, Navigation]}
+            modules={[FreeMode, Pagination, Navigation,Autoplay]}
+            speed={"4000"}
+            loop={true}
+            autoplay={{ delay: 0 }}
             navigation={true}
             freeMode={true}
             slidesPerView={"1.2"}
@@ -380,7 +386,9 @@ const HomePage = ({ setSearchValue, setGenre }) => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p><a href="">Privacy Policy</a> | <a href="">Terms of Service</a></p>
+            <p>
+              <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+            </p>
             <p>&copy; 2024 - Present Pastel Pages. All rights reserved.</p>
           </div>
         </div>

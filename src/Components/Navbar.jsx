@@ -15,7 +15,7 @@ export default function Navbar({ setGenre, setSearchValue,cartSize }) {
   return (
     <div className="navbar">
       <Link className="navbar-logo" to="/" onClick={() => setGenre("")}>
-        <img src="./public/logo.svg" id="logo" />
+        <img src="/logo.svg" id="logo" />
         <h1>Pastel Pages</h1>
       </Link>
       <div className="navbar-content">
@@ -72,10 +72,10 @@ export default function Navbar({ setGenre, setSearchValue,cartSize }) {
         </Link>
         <Link className="cart-box" to="/cart" onClick={() => setGenre("")}>
           <div className="cart-circle" style={{ opacity: `${cartSize ? 1 : 0}`}}>{ cartSize}</div>
-          <img src="./public/cart.svg" alt="" />
+          <img src="/cart.svg" alt="" />
         </Link>
         <Link to="/createAccount" onClick={() => setGenre("")}>
-          <img src="./public/user.svg" alt="" />
+          <img src="/user.svg" alt="" />
         </Link>
       </div>
     </div>
