@@ -990,13 +990,15 @@
 }
 
 .book-card-details-box{
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  height: 160px;
+  padding-bottom: 10px;
   background-color: #F8EAD8;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book-card-title{
@@ -1011,23 +1013,22 @@
   font-family: "poppins";
   color: #54bab9;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .book-card-genre{
   font-family: "poppins";
   background-color: #f3c5c5;
-  width: 80px;
+  width: 90px;
+  padding: 5px 2px;
   text-align: center;
   border-radius: 5px;
-  position: relative;
-  left: 30%;
+  margin-bottom: 10px;
 }
 
 .book-card-rating{
   font-family: "poppins";
   color: #8f6d6d;
-  position: relative;
-  left: 35%;
   background-color: #d1e9f6;
   width: 60px;
   text-align: center;
@@ -1462,18 +1463,23 @@ background-color: hsl(0, 100%, 75%);
   padding: 100px 20px;
 }
 
-.genre-content{
-  max-width: 1500px;
-  margin: auto;
+.genre-page>*{
+  padding-top: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #F4BFBF;
+  padding-bottom: 30px;
 }
 
-.genre-discription-box{
+
+.genre-discription-content{
   max-width: 1000px;
   margin: auto;
   padding: 50px 20px;
   padding-bottom: 100px;
   border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.749);
+  
 }
 
 .genre-heading{
@@ -1490,5 +1496,19 @@ background-color: hsl(0, 100%, 75%);
   font-size: 1.1rem;
   text-align: center;
   color: #8f6d6d;
+}
+
+.genre-top-picks-content{
+  max-width: 1500px;
+  margin: auto;
+}
+
+.genre-top-picks-heading{
+  font-family: "Allura";
+  color: #8d5863;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
 }
 

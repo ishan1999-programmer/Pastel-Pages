@@ -83,7 +83,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="The Alchemist"
                 writer="Paulo Coelho"
                 genre="Self-Help"
-                rating="4.6⭐️"
+                rating="4.6 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -92,7 +92,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="And Then There Were None"
                 writer="Agatha Christie"
                 genre="Thriller"
-                rating="4.3⭐️"
+                rating="4.3 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -101,7 +101,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="Angels and Demons"
                 writer="Dan Brown"
                 genre="Mystery"
-                rating="4.4⭐️"
+                rating="4.4 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -110,7 +110,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="Atomic Habits"
                 writer="James Clear"
                 genre="Self-Help"
-                rating="4.5⭐️"
+                rating="4.5 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -119,7 +119,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="1984"
                 writer="George Orwel"
                 genre="Sci-fi"
-                rating="4.7⭐️"
+                rating="4.7 ⭐️"
               />
             </SwiperSlide>
           </Swiper>
@@ -172,7 +172,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="The Silent Patient"
                 writer="Alex Michaelides"
                 genre="Mystery"
-                rating="4.6⭐️"
+                rating="4.6 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -181,7 +181,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="Rock Paper Scissors"
                 writer="Alice Feeney"
                 genre="Mystery"
-                rating="4.8⭐️"
+                rating="4.8 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -190,7 +190,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="The Three Body Problem"
                 writer="Cixin Liu"
                 genre="Sci-fi"
-                rating="4.4⭐️"
+                rating="4.4 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -199,7 +199,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="The Housemaid"
                 writer="Freida McFadden"
                 genre="Thriller"
-                rating="4.5⭐️"
+                rating="4.5 ⭐️"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -208,7 +208,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
                 title="I let You Go"
                 writer="Clare Mackintosh"
                 genre="Mystery"
-                rating="4.7⭐️"
+                rating="4.7 ⭐️"
               />
             </SwiperSlide>
           </Swiper>
