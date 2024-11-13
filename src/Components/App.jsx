@@ -13,7 +13,10 @@ import { useEffect, useState } from "react";
 import SearchPage from "./SearchPage";
 
 export default function App() {
-  let [genre, setGenre] = useState("");
+  let [genre, setGenre] = useState(() => {
+    let storedGenre = localStorage.getItem("genre");
+    return storedGenre ? storedGenre : "";
+  });
 
   let [searchValue, setSearchValue] = useState(() => {
     let storedSearchValue = localStorage.getItem("searchValue");
@@ -24,6 +27,10 @@ export default function App() {
     let storedCartItems = localStorage.getItem("cartItems");
     return storedCartItems ? JSON.parse(storedCartItems) : [];
   });
+
+  useEffect(() => {
+    localStorage.setItem("genre", genre);
+  },[genre])
 
   useEffect(() => {
     localStorage.setItem("searchValue", searchValue);

@@ -2,7 +2,8 @@ import React from "react";
 import BookCard from "./BookCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
-import { Navigation, Keyboard } from "swiper/modules";
+import { Navigation, Keyboard, Grid } from "swiper/modules";
+import AuthorCard from "./AuthorCard";
 
 export default function GenreDisplay({ currentGenre }) {
   let topPicksArray = currentGenre.genreTopPicks.map((val) => (
@@ -13,6 +14,16 @@ export default function GenreDisplay({ currentGenre }) {
         writer={val.writer}
         genre={val.genre}
         rating={val.rating}
+      />
+    </SwiperSlide>
+  ));
+
+  let topAuthorsArray = currentGenre.genreTopAuthors.map((val) => (
+    <SwiperSlide>
+      <AuthorCard
+        authorCover={val.authorCover}
+        authorName={val.authorName}
+        authorDescription={val.authorDescription}
       />
     </SwiperSlide>
   ));
@@ -38,7 +49,7 @@ export default function GenreDisplay({ currentGenre }) {
             keyboard={true}
             slidesPerView={"1"}
             navigation={true}
-            centeredSlides={true}
+            grabCursor={true}
             breakpoints={{
               1400: { slidesPerView: 5 },
               1230: { slidesPerView: 4.5 },
@@ -51,6 +62,35 @@ export default function GenreDisplay({ currentGenre }) {
             }}
           >
             {topPicksArray}
+          </Swiper>
+        </div>
+      </div>
+      <div className="genre-top-authors-section">
+        <div className="genre-top-authors-content">
+          <p className="genre-top-authors-heading">
+            Meet the Minds Behind the Stories
+          </p>
+          <Swiper
+            keyboard={true}
+            grabCursor={true}
+            modules={[Navigation]}
+            navigation={true}
+            loop={true}
+            slidesPerView={1}
+            breakpoints={{
+              1300: { slidesPerView: 4 },
+              1150: { slidesPerView: 3.5 },
+              1000: { slidesPerView: 3 },
+              890: { slidesPerView: 2.7 },
+              795: { slidesPerView: 2.4 },
+              705: { slidesPerView: 2.1 },
+              610: { slidesPerView: 1.8 },
+              550: { slidesPerView: 1.6 },
+              490: { slidesPerView: 1.4 },
+              420: { slidesPerView: 1.2 },
+            }}
+          >
+            {topAuthorsArray}
           </Swiper>
         </div>
       </div>

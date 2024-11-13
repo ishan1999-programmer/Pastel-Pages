@@ -87,6 +87,38 @@ let genreObject = {
         rating: "4 ⭐️",
       },
     ],
+    genreTopAuthors: [
+      {
+        authorCover: "/george-martin.jpg",
+        authorName: "George R. R. Martin",
+        authorDescription:
+          "You know this New Jersey native as the author of the high fantasy series A Song of Ice and Fire— the inspiration for the global phenomenon that is HBO's Game of Thrones.",
+      },
+      {
+        authorCover: "/seanan.webp",
+        authorName: "Seanan McGuire",
+        authorDescription:
+          "With the urban fantasy October Daye series, the Wayward Children series, and many other works of fantasy to her name, Seanan McGuire is one of the most prolific authors currently working in the genre. ",
+      },
+      {
+        authorCover: "/brandon.jpg",
+        authorName: "Brandon Sanderson",
+        authorDescription:
+          "From finishing Robert Jordan’s Wheel of Time series to penning his wholly original works in the Cosmere universe, including the Stormlight Archive, Brandon Sanderson has a great talent for worldbuilding and epic fantasy.",
+      },
+      {
+        authorCover: "/patrick.jpg",
+        authorName: "Patrick Rothfuss",
+        authorDescription:
+          "With The Name of the Wind, he established a name for himself as a seriously talented writer of heroic fantasy.The Kingkiller Chronicle is such a sweeping, exciting adventure with a deeply imagined magic system",
+      },
+      {
+        authorCover: "/JRR.jpg",
+        authorName: "J.R.R. Tolkien",
+        authorDescription:
+          "Born John Ronald Reuel Tolkien, his surname has gone on to become synonymous with epic fantasy. The Lord of the Rings built many of the genre's main characteristics",
+      },
+    ],
   },
   horror: {
     pageTitle: "Horror",
@@ -165,6 +197,38 @@ let genreObject = {
         writer: "Joe Hill",
         genre: "Horror",
         rating: "4.3 ⭐️",
+      },
+    ],
+    genreTopAuthors: [
+      {
+        authorCover: "/stephen.jpg",
+        authorName: "Stephen King",
+        authorDescription:
+          "King of Horror! Stephen King is the prolific writer of dozens of horror novels, with a dash of mystery, paranormal, and a little sci-fi thrown in for good measure.",
+      },
+      {
+        authorCover: "/grahams.jpg",
+        authorName: "Stephen Graham Jones",
+        authorDescription:
+          "Stephen Graham Jones is a Blackfeet Native American author best known for his horror audiobooks, but his works are often experimental in nature, ranging from literary to pulp horror.",
+      },
+      {
+        authorCover: "/jonathan.jpg",
+        authorName: "Jonathan Maberry",
+        authorDescription:
+          "Beware! Once you step into Jonathan Maberry's postapocalyptic world, there’s no going back. Horror fans know nothing beats a classic, and Maberry's action-packed classic baddies—zombies—are best.",
+      },
+      {
+        authorCover: "/joe.jpg",
+        authorName: "Joe Hill",
+        authorDescription:
+          "Joe Hill is the son of Stephen King, and while he may not be quite as prolific as his father (yet!), he's written an impressive array of comic books and horror novels.",
+      },
+      {
+        authorCover: "/silvia.jpg",
+        authorName: "Silvia Moreno-Garcia",
+        authorDescription:
+          "Silvia Moreno-Garcia was born in Mexico and now lives in Canada, and although she's a prolific writer across all genres, it's only recently that she's become well-known for her horror.",
       },
     ],
   },
@@ -247,6 +311,38 @@ let genreObject = {
         rating: "4.4 ⭐️",
       },
     ],
+    genreTopAuthors: [
+      {
+        authorCover: "/arthur.jpg",
+        authorName: "Arthur Conan Doyle",
+        authorDescription:
+          "Elementary, my dear Watson. A doctor-turned-writer, Sir Arthur is the man behind the famous detective Sherlock Holmes.",
+      },
+      {
+        authorCover: "/stieg.jpg.webp",
+        authorName: "Stieg Larsson",
+        authorDescription:
+          "A Swedish journalist, Larsson is best known for writing the Millennium trilogy starring Lisbeth Salander and Mikael Blomkvist.",
+      },
+      {
+        authorCover: "/agatha.png",
+        authorName: "Agatha Christie",
+        authorDescription:
+          "The English crime novelist wrote dozens of mysteries, and is best known for her beloved fictional detectives Hercule Poirot and Miss Marple. She paved the way for many women authors.",
+      },
+      {
+        authorCover: "/alex.jpg",
+        authorName: "Alex Michaelides",
+        authorDescription:
+          "The Silent Patient was his first novel and was the biggest-selling debut in the world in 2019. It spent more than a year on the New York Times bestseller list and sold in a record-breaking forty-nine countries.",
+      },
+      {
+        authorCover: "/dan.jpg",
+        authorName: "Dan Brown",
+        authorDescription:
+          "Dan Brown is the author of numerous #1 bestselling novels, including The Da Vinci Code, which has become one of the best selling novels of all time as well as the subject of intellectual debate among readers and scholars.",
+      },
+    ],
   },
   romance: {
     pageTitle: "Romance",
@@ -325,6 +421,38 @@ let genreObject = {
         writer: "Emily Henry ",
         genre: "Romance",
         rating: "4.2 ⭐️",
+      },
+    ],
+    genreTopAuthors: [
+      {
+        authorCover: "/emily.jpg",
+        authorName: "Emily Henry",
+        authorDescription:
+          "Emily Henry is the #1 New York Times bestselling author of Book Lovers, People We Meet on Vacation, and Beach Read, as well as the forthcoming Happy Place.",
+      },
+      {
+        authorCover: "/sally.jpg",
+        authorName: "Sally Thorne",
+        authorDescription:
+          "Sally Thorne is the USA Today bestselling author of the office rom-com The Hating Game (2016). It is her debut novel that has sold in over twenty-five countries and is being made into a major motion picture.",
+      },
+      {
+        authorCover: "/stephenie.webp",
+        authorName: "Stephenie Meyer",
+        authorDescription:
+          "Stephenie Meyer is the author of the bestselling Twilight series, The Host, and The Chemist. Twilight was one of 2005's most talked about novels and within weeks of its release the book debuted at #5 on The New York Times bestseller list",
+      },
+      {
+        authorCover: "/jojo.jpg",
+        authorName: "Jojo Moyes",
+        authorDescription:
+          "Jojo Moyes is a British novelist. Moyes' novel Foreign Fruit won the Romantic Novelists' Association (RNA) Romantic Novel of the Year in 2004.",
+      },
+      {
+        authorCover: "/helen.jpg",
+        authorName: "Helen Hoang",
+        authorDescription:
+          "Helen Hoang is that shy person who never talks. Until she does. And the worst things fly out of her mouth. She read her first romance novel in eighth grade and has been addicted ever since. Her journey inspired THE KISS QUOTIENT.",
       },
     ],
   },
@@ -407,6 +535,38 @@ let genreObject = {
         rating: "4.1 ⭐️",
       },
     ],
+    genreTopAuthors: [
+      {
+        authorCover: "/frank.webp",
+        authorName: "Frank Herbert",
+        authorDescription:
+          "Franklin Patrick Herbert Jr. was an American science fiction author best known for the 1965 novel Dune and its five sequels. Though he became famous for his novels, he also wrote short stories and worked as a newspaper journalist.",
+      },
+      {
+        authorCover: "/issac.webp",
+        authorName: "Isaac Asimov",
+        authorDescription:
+          "Works of prolific Russian-American writer Isaac Asimov include popular explanations of scientific principles, The Foundation Trilogy (1951-1953), and other volumes of fiction.",
+      },
+      {
+        authorCover: "/george.webp",
+        authorName: "George Orwell",
+        authorDescription:
+          "Eric Arthur Blair, better known by his pen name George Orwell, was an English author and journalist. Orwell is best known for the dystopian novel Nineteen Eighty-Four (published in 1949) and the satirical novella Animal Farm (1945)",
+      },
+      {
+        authorCover: "/andy.webp",
+        authorName: "Andy Weir",
+        authorDescription:
+          "ANDY WEIR built a career as a software engineer until the success of his first published novel, THE MARTIAN, allowed him to live out his dream of writing fulltime.",
+      },
+      {
+        authorCover: "/douglas.JPG",
+        authorName: "Douglas Adams",
+        authorDescription:
+          "Douglas Noel Adams was an English author, best known for The Hitchhiker's Guide to the Galaxy (HHGTTG). Originally a 1978 BBC radio comedy, The Hitchhiker's Guide to the Galaxy developed into a trilogy of five books.",
+      },
+    ],
   },
   thriller: {
     pageTitle: "Thriller",
@@ -485,6 +645,38 @@ let genreObject = {
         writer: "Karin Slaughter",
         genre: "Thriller",
         rating: "4.1 ⭐️",
+      },
+    ],
+    genreTopAuthors: [
+      {
+        authorCover: "/agatha.png",
+        authorName: "Agatha Christie",
+        authorDescription:
+          "The English crime novelist wrote dozens of mysteries, and is best known for her beloved fictional detectives Hercule Poirot and Miss Marple. She paved the way for many women authors.",
+      },
+      {
+        authorCover: "/gillian.jpg",
+        authorName: "Gillian Flynn",
+        authorDescription:
+          "Gillian Flynn is an American author. She has so far written three novels, Sharp Objects, for which she won the 2007 Ian Fleming Steel Dagger for the best thriller, Dark Places, and her best-selling third novel Gone Girl.",
+      },
+      {
+        authorCover: "/blake.jpg",
+        authorName: "Blake Crouch",
+        authorDescription:
+          "Blake Crouch is a bestselling novelist and screenwriter. He is the author of the forthcoming novel, Dark Matter, for which he is writing the screenplay for Sony Pictures.",
+      },
+      {
+        authorCover: "/lucy.jpg",
+        authorName: "Lucy Foley",
+        authorDescription:
+          "She is the author of the murder mystery thrillers The Midnight Feast, The Paris Apartment, The Guest List and The Hunting Party — as well as the historical novels The Book of Lost and Found, The Invitation and Last Letter from Istanbul.",
+      },
+      {
+        authorCover: "/freida.jpg",
+        authorName: "Freida McFadden",
+        authorDescription:
+          "#1 New York Times, USA Today, Wall Street Journal, Publisher's Weekly, and Amazon Charts bestselling author Freida McFadden is an author who has penned multiple Kindle bestselling psychological thrillers and medical humor novels.",
       },
     ],
   },

@@ -42,6 +42,7 @@ const HomePage = ({ setSearchValue, setGenre }) => {
           <Swiper
             modules={[FreeMode, Pagination, Navigation, Autoplay]}
             speed={"4000"}
+            grabCursor={true}
             loop={true}
             autoplay={{ delay: 0 }}
             navigation={true}
@@ -129,12 +130,13 @@ const HomePage = ({ setSearchValue, setGenre }) => {
         <div className="recommendation-content">
           <h1>Recommended For You</h1>
           <Swiper
-            modules={[FreeMode, Pagination, Navigation,Autoplay]}
+            modules={[FreeMode, Pagination, Navigation, Autoplay]}
             speed={"4000"}
             loop={true}
             autoplay={{ delay: 0 }}
             navigation={true}
             freeMode={true}
+            grabCursor={true}
             slidesPerView={"1.2"}
             breakpoints={{
               1350: {
