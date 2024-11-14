@@ -94,6 +94,51 @@ export default function GenreDisplay({ currentGenre }) {
           </Swiper>
         </div>
       </div>
+      <div className="genre-quotes-section">
+        <div className="genre-quotes-content">
+          <p className="genre-quotes-heading">
+            Notable Lines from the Genre...
+          </p>
+          <div className="genre-quotes-grid">
+            <div className="genre-quotes">
+              <p className="genre-quote">{currentGenre.genreQuotes[0].quote}</p>
+              <p className="genre-quote-writer">
+                {`- ${currentGenre.genreQuotes[0].quoteWriter}`}
+              </p>
+            </div>
+            <div className="genre-quotes">
+              <p className="genre-quote">{currentGenre.genreQuotes[1].quote}</p>
+              <p className="genre-quote-writer">
+                {`- ${currentGenre.genreQuotes[1].quoteWriter}`}
+              </p>
+            </div>
+            <div className="genre-quotes">
+              <p className="genre-quote">{currentGenre.genreQuotes[2].quote}</p>
+              <p className="genre-quote-writer">
+                {`- ${currentGenre.genreQuotes[2].quoteWriter}`}
+              </p>
+            </div>
+            <div className="genre-quotes">
+              <p className="genre-quote">{currentGenre.genreQuotes[3].quote}</p>
+              <p className="genre-quote-writer">
+                {`- ${currentGenre.genreQuotes[3].quoteWriter}`}
+              </p>
+            </div>
+            <div className="genre-quotes">
+              <p className="genre-quote">{currentGenre.genreQuotes[4].quote}</p>
+              <p className="genre-quote-writer">
+                {`- ${currentGenre.genreQuotes[4].quoteWriter}`}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="genre-did-you-know-section">
+        <div className="genre-did-you-know-content">
+          <p className="genre-did-you-know-heading">Did you know ?</p>
+          <p className="genre-did-you-know">{currentGenre.genreDidYouKnow}</p>
+        </div>
+      </div>
     </div>
   );
 }

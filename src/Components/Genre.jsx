@@ -119,6 +119,35 @@ let genreObject = {
           "Born John Ronald Reuel Tolkien, his surname has gone on to become synonymous with epic fantasy. The Lord of the Rings built many of the genre's main characteristics",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Dr. Seuss",
+        quote:
+          "“Fantasy is a necessary ingredient in living, it's a way of looking at life through the wrong end of a telescope.”",
+      },
+      {
+        quoteWriter: "Albert Einstein",
+        quote:
+          "“Imagination is everything. It is the preview of life's coming attractions.”",
+      },
+      {
+        quoteWriter: "J.R.R. Tolkien",
+        quote:
+          "“Do not meddle in the affairs of wizards, for they are subtle and quick to anger.”",
+      },
+      {
+        quoteWriter: "George R.R. Martin",
+        quote:
+          "“They can keep their heaven. When I die, I’d sooner go to Middle-earth.”",
+      },
+      {
+        quoteWriter: "Lloyd Alexander",
+        quote:
+          "“Fantasy is hardly an escape from reality. It's a way of understanding it.”",
+      },
+    ],
+    genreDidYouKnow:
+      "Many fantasy novels draw from ancient mythologies! Authors like J.R.R. Tolkien and C.S. Lewis were inspired by Norse and Greek mythology, bringing age-old tales to life in magical new worlds!",
   },
   horror: {
     pageTitle: "Horror",
@@ -231,6 +260,35 @@ let genreObject = {
           "Silvia Moreno-Garcia was born in Mexico and now lives in Canada, and although she's a prolific writer across all genres, it's only recently that she's become well-known for her horror.",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Stephen King",
+        quote:
+          "“Alone. Yes, that's the key word, the most awful word in the English tongue. Murder doesn't hold a candle to it and hell is only a poor synonym.”",
+      },
+      {
+        quoteWriter: "Joe Hill",
+        quote:
+          "“Horror was rooted in sympathy . . . in understanding what it would be like to suffer the worst.”",
+      },
+      {
+        quoteWriter: "Clive Barker",
+        quote:
+          "“Horror fiction shows us that the control we believe we have is purely illusory, and that every moment we teeter on chaos and oblivion.”",
+      },
+      {
+        quoteWriter: "Robert Bloch",
+        quote:
+          "“The shortest horror story: The last man on Earth sat alone in a room, there was a knock on the door.”",
+      },
+      {
+        quoteWriter: "Shirley Jackson",
+        quote:
+          "“I am like a small creature swallowed whole by a monster, she thought, and the monster feels my tiny little movements inside.”",
+      },
+    ],
+    genreDidYouKnow:
+      "Horror stories tap into universal fears! Iconic monsters like vampires and zombies have origins in folklore, shaped by our deepest anxieties over death, the unknown, and transformation",
   },
   mystery: {
     pageTitle: "Mystery",
@@ -343,6 +401,35 @@ let genreObject = {
           "Dan Brown is the author of numerous #1 bestselling novels, including The Da Vinci Code, which has become one of the best selling novels of all time as well as the subject of intellectual debate among readers and scholars.",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Anais Nin",
+        quote:
+          "“The possession of knowledge does not kill the sense of wonder and mystery. There is always more mystery.”",
+      },
+      {
+        quoteWriter: "Thomas Moore",
+        quote:
+          "“It is only through mystery and madness that the soul is revealed”",
+      },
+      {
+        quoteWriter: "Cormac McCarthy",
+        quote:
+          "“Your heart's desire is to be told some mystery. The mystery is that there is no mystery.”",
+      },
+      {
+        quoteWriter: "Derek Landy",
+        quote:
+          "“Every solution to every problem is simple. It's the distance between the two where the mystery lies.”",
+      },
+      {
+        quoteWriter: "Oscar Wilde",
+        quote:
+          "“The true mystery of the world is the visible, not the invisible.”",
+      },
+    ],
+    genreDidYouKnow:
+      "The mystery genre exploded in popularity thanks to Agatha Christie and Arthur Conan Doyle. Their famous detectives, Hercule Poirot and Sherlock Holmes, changed the way we think about solving crimes in fiction!",
   },
   romance: {
     pageTitle: "Romance",
@@ -455,6 +542,34 @@ let genreObject = {
           "Helen Hoang is that shy person who never talks. Until she does. And the worst things fly out of her mouth. She read her first romance novel in eighth grade and has been addicted ever since. Her journey inspired THE KISS QUOTIENT.",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Dr. Seuss",
+        quote:
+          "“You know you're in love when you can't fall asleep because reality is finally better than your dreams.”",
+      },
+      {
+        quoteWriter: "Stephen Chbosky",
+        quote: "“We accept the love we think we deserve.”",
+      },
+      {
+        quoteWriter: "Lao Tzu",
+        quote:
+          "“Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.”",
+      },
+      {
+        quoteWriter: "Sarah Dessen",
+        quote:
+          "“There is never a time or place for true love. It happens accidentally, in a heartbeat, in a single flashing, throbbing moment.”",
+      },
+      {
+        quoteWriter: "Robert A. Heinlein",
+        quote:
+          "“Love is that condition in which the happiness of another person is essential to your own.”",
+      },
+    ],
+    genreDidYouKnow:
+      "Romance is one of the oldest and most widely read genres! Some of the first romance stories were written over a thousand years ago and continue to inspire modern tales of love and connection.",
   },
   scifi: {
     pageTitle: "Sci-fi",
@@ -567,6 +682,34 @@ let genreObject = {
           "Douglas Noel Adams was an English author, best known for The Hitchhiker's Guide to the Galaxy (HHGTTG). Originally a 1978 BBC radio comedy, The Hitchhiker's Guide to the Galaxy developed into a trilogy of five books.",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Marie Lu",
+        quote:
+          "“Everything's science fiction until someone makes it science fact.”",
+      },
+      {
+        quoteWriter: "Robyn Mundell",
+        quote:
+          "“Isn’t that what it means to be a scientist? To push the boundaries of the unknown? To bravely, actively explore the enormity of our universe ?”",
+      },
+      {
+        quoteWriter: "Ray Bradbury",
+        quote:
+          "“Science fiction is the most important literature in the history of the world, because it's the history of ideas, the history of our civilization birthing itself.”",
+      },
+      {
+        quoteWriter: "Frederik Pohl",
+        quote:
+          "“A good science fiction story should be able to predict not the automobile but the traffic jam.”",
+      },
+      {
+        quoteWriter: "Ursula K. LeGuin",
+        quote: "“Science fiction is not prescriptive; it is descriptive.”",
+      },
+    ],
+    genreDidYouKnow:
+      "Many sci-fi inventions inspired real-world technology! Concepts like space travel, robots, and even smart devices were imagined in sci-fi long before they became reality.",
   },
   thriller: {
     pageTitle: "Thriller",
@@ -679,5 +822,34 @@ let genreObject = {
           "#1 New York Times, USA Today, Wall Street Journal, Publisher's Weekly, and Amazon Charts bestselling author Freida McFadden is an author who has penned multiple Kindle bestselling psychological thrillers and medical humor novels.",
       },
     ],
+    genreQuotes: [
+      {
+        quoteWriter: "Terry Hayes,",
+        quote:
+          "“Nobody’s ever been arrested for a murder; they have only ever been arrested for not planning it properly.”",
+      },
+      {
+        quoteWriter: "James Patterson",
+        quote:
+          "“Ultimately, a great thriller is a roller coaster ride. I like to think that's a promise I have never failed to keep, and one that I'd say has served my books well.”",
+      },
+      {
+        quoteWriter: "Michael Eklund",
+        quote:
+          "“Every thriller needs a good bad guy; without a bad guy, there's no thriller.”",
+      },
+      {
+        quoteWriter: "Gillian Flynn",
+        quote:
+          "“A great thriller, to me, is more about creating a sense of unease: a queasiness that comes with knowing something is not quite right.”",
+      },
+      {
+        quoteWriter: "Lee Child",
+        quote:
+          "“The way to write a thriller is to ask a question at the beginning, and answer it at the end.”",
+      },
+    ],
+    genreDidYouKnow:
+      "Thrillers are known for their suspenseful twists! Writers often keep readers guessing with red herrings—clues that seem important but lead to surprising revelations and nail-biting tension.”",
   },
 };

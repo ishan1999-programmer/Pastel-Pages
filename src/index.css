@@ -1177,7 +1177,6 @@
 }
 
 .quotes{
-  cursor: pointer;
   border-radius: 20px;
   padding: 50px 30px;
   background-color: #FFE9D0;
@@ -1511,7 +1510,7 @@ background-color: hsl(0, 100%, 75%);
   margin: auto;
 }
 
-.genre-top-picks-heading{
+.genre-top-picks-heading,.genre-quotes-heading{
   font-family: "Allura";
   color: #8d5863;
   font-size: 3rem;
@@ -1576,6 +1575,83 @@ background-color: hsl(0, 100%, 75%);
   text-align: center;
   margin-bottom: 5px;
 }
+
+.genre-quotes-content{
+  max-width: 1500px;
+  margin: auto;
+}
+
+.genre-quote{
+  font-family: "Tangerine", serif;
+  font-size: 1.8rem;
+  color: #c96868;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.genre-quote-writer{
+  font-family:  "poppins";
+  font-size: 1rem;
+  color: #54bab9;
+  text-align: center;
+}
+
+.genre-quotes-grid{
+ display: grid;
+ gap: 20px;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.genre-quotes{
+  background-color: #FAEDCE;
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 0px 0px 5px grey;
+  transition: all 0.3s;
+}
+
+.genre-quotes:hover{
+  transform: scale(1.05);
+  background-color: hsl(32, 100%, 80%);
+}
+
+.genre-did-you-know-content{
+  max-width: 1000px;
+  margin: auto;
+  background-color: #EECEB9;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px grey;
+  transition: all 0.3s;
+}
+
+.genre-did-you-know-content:hover{
+  transform: scale(1.03);
+   background-color: hsl(24, 61%, 73%);
+}
+
+.genre-did-you-know-heading{
+  font-family: "Allura", cursive;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #e5707e;
+}
+
+.genre-did-you-know{
+  font-family: "poppins";
+  font-size: 1.1rem;
+  text-align: center;
+  color: #8d5863;
+}
+
+
+
+
+
 
 
 
