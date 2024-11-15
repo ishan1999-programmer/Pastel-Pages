@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 
-const Cart = ({ cartItems, handleRemove, changeQuantity, cartSize }) => {
+const Cart = ({
+  cartItems,
+  handleRemove,
+  changeQuantity,
+  cartSize,
+}) => {
   let [promoCodeText, setPromoCodeText] = useState("");
   let [promoCodeDiscount, setPromoCodeDiscount] = useState(0);
   let [promoCodeMessage, setPromoCodeMessage] = useState({
@@ -139,7 +144,7 @@ const Cart = ({ cartItems, handleRemove, changeQuantity, cartSize }) => {
                     display: `${promoCodeMessage.display}`,
                     backgroundColor: `${
                       promoCodeMessage.isValid ? "#54BAB9" : "#E5707E"
-                    }`
+                    }`,
                   }}
                 >
                   {promoCodeMessage.isValid
@@ -198,7 +203,6 @@ const Cart = ({ cartItems, handleRemove, changeQuantity, cartSize }) => {
           <p className="cart-empty-page-text2">
             Explore our collection and fill your cart with cozy reads!
           </p>
-
           <Link to="/" className="shop-books-link">
             <img src="cart.svg" alt="" />
             <p>Shop Books</p>

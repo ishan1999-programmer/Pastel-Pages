@@ -8,7 +8,7 @@
 
 :root {
   height: 100vh;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .navbar {
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 20;
-  background-color: #F8EAD8;
+  background-color: #f8ead8;
   opacity: 1;
 }
 
@@ -38,29 +38,46 @@
   font-family: "Allura", cursive;
 }
 
-.navbar-content img {
+.navbar-content-big-screen img {
   width: 25px;
   height: 25px;
 }
 
-.navbar-content {
+.navbar-content-big-screen {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.navbar-content > * {
+.navbar-content-big-screen > * {
   cursor: pointer;
   font-family: "poppins";
-  color: hsl(0, 13%, 49%);
+  color: #8c7b75;
   font-size: 1.2rem;
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
-.navbar-content > *:hover {
-  background-color: #F3C5C5;
+.navbar-content-big-screen > *:hover {
+  background-color: #f3c5c5;
+}
+
+.navbar-content-small-screen {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-content-small-screen:hover {
+  background-color: #f3c5c5;
+}
+
+.navbar-content-small-screen img {
+  width: 30px;
+  height: 30px;
 }
 
 .genre-box {
@@ -265,7 +282,6 @@
 .cart {
   min-height: 100vh;
   padding-top: 150px;
-  
 }
 
 .cart-content {
@@ -851,12 +867,11 @@
   color: #e5707e;
 }
 
-.homepage{
+.homepage {
   padding-top: 75px;
 }
 
-
-.hero-section{
+.hero-section {
   padding: 100px 20px;
   min-height: 500px;
   background-image: url("hero-image.png");
@@ -864,7 +879,7 @@
   background-size: cover;
 }
 
-.hero-section-content{
+.hero-section-content {
   max-width: 1500px;
   margin: auto;
   opacity: 0;
@@ -920,7 +935,7 @@
   padding: 5px 15px;
   font-size: 1.4rem;
   width: 400px;
-  color: #FF9494;
+  color: #ff9494;
 }
 
 .search {
@@ -954,14 +969,12 @@
   }
 }
 
-
 @keyframes slideInRight {
   to {
     transform: translateX(0);
     opacity: 1;
   }
 }
-
 
 @keyframes growIn {
   to {
@@ -970,30 +983,29 @@
   }
 }
 
-.book-card-homepage{
+.book-card-homepage {
   width: 250px;
   border-radius: 10px;
-  border: 2px solid #F4BFBF;
+  border: 2px solid #f4bfbf;
 }
 
-
-.book-card-image-box{
+.book-card-image-box {
   height: 300px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.book-card-image-box img{
+.book-card-image-box img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.book-card-details-box{
+.book-card-details-box {
   height: 160px;
   padding-bottom: 10px;
-  background-color: #F8EAD8;
+  background-color: #f8ead8;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
@@ -1002,7 +1014,7 @@
   align-items: center;
 }
 
-.book-card-title{
+.book-card-title {
   font-family: "poppins";
   color: #c96868;
   text-align: center;
@@ -1010,14 +1022,14 @@
   font-size: 1.1rem;
 }
 
-.book-card-writer{
+.book-card-writer {
   font-family: "poppins";
   color: #54bab9;
   text-align: center;
   margin-bottom: 5px;
 }
 
-.book-card-genre{
+.book-card-genre {
   font-family: "poppins";
   background-color: #f3c5c5;
   width: 90px;
@@ -1027,7 +1039,7 @@
   margin-bottom: 10px;
 }
 
-.book-card-rating{
+.book-card-rating {
   font-family: "poppins";
   color: #8f6d6d;
   background-color: #d1e9f6;
@@ -1036,57 +1048,67 @@
   border-radius: 5px;
 }
 
-.bestsellers-section,.recommendation-section,.explore-genres-section,.quotes-section,.newsletter-section{
+.bestsellers-section,
+.recommendation-section,
+.explore-genres-section,
+.quotes-section,
+.newsletter-section {
   padding-top: 50px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom: 1px solid #F4BFBF;
+  border-bottom: 1px solid #f4bfbf;
   padding-bottom: 30px;
 }
 
-.quotes-section,.newsletter-section{
+.quotes-section,
+.newsletter-section {
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.newsletter-section{
+.newsletter-section {
   border: none;
   padding-bottom: 0px;
 }
 
-.bestsellers-content,.recommendation-content,.explore-genres-content{
+.bestsellers-content,
+.recommendation-content,
+.explore-genres-content {
   max-width: 1500px;
   margin: auto;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.quotes-content{
+.quotes-content {
   max-width: 1200px;
   margin: auto;
 }
 
-.newsletter-content{
+.newsletter-content {
   max-width: 1200px;
   margin: auto;
   padding: 50px 30px;
   padding-bottom: 100px;
-  background-color: #F5DAD2;
+  background-color: #f5dad2;
   border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.646);
 }
 
-.quotes-grid{
+.quotes-grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.explore-genres-content{
+.explore-genres-content {
   max-width: 1200px;
 }
 
-.bestsellers-content h1,.recommendation-content h1,.explore-genres-content h1,.quotes-content h1{
+.bestsellers-content h1,
+.recommendation-content h1,
+.explore-genres-content h1,
+.quotes-content h1 {
   font-family: "Allura", cursive;
   color: #8d5863;
   text-align: center;
@@ -1095,14 +1117,14 @@
   margin-bottom: 20px;
 }
 
-.explore-genres-grid{
+.explore-genres-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(2,160px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 160px);
   gap: 20px;
 }
 
-.genres-homepage{
+.genres-homepage {
   cursor: pointer;
   padding: 20px 5px;
   border-radius: 10px;
@@ -1110,87 +1132,87 @@
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.684);
 }
 
-.genres-homepage:hover{
+.genres-homepage:hover {
   transform: scale(1.05);
 }
 
-.genres-homepage>:first-child{
+.genres-homepage > :first-child {
   font-family: "poppins";
   color: #8d5863;
   text-align: center;
   font-size: 2rem;
 }
 
-.genres-homepage>:nth-child(2){
+.genres-homepage > :nth-child(2) {
   font-family: "poppins";
   color: #8f6d6d;
   text-align: center;
   font-size: 1.2rem;
 }
 
-.fantasy{
-  background-color: #C9E9D2;
+.fantasy {
+  background-color: #c9e9d2;
 }
 
-.fantasy:hover{
+.fantasy:hover {
   background-color: hsl(137, 42%, 77%);
 }
 
-.horror{
-  background-color: #DBB5B5;
+.horror {
+  background-color: #dbb5b5;
 }
 
-.horror:hover{
+.horror:hover {
   background-color: hsl(0, 35%, 70%);
 }
 
-.scifi{
-  background-color: #D2E0FB;
+.scifi {
+  background-color: #d2e0fb;
 }
 
-.scifi:hover{
+.scifi:hover {
   background-color: hsl(220, 84%, 82%);
 }
 
-.romance{
-  background-color: #FF9B9B;
+.romance {
+  background-color: #ff9b9b;
 }
 
-.romance:hover{
+.romance:hover {
   background-color: hsl(0, 100%, 72%);
 }
 
-.mystery{
-  background-color: #FFC6AC;
+.mystery {
+  background-color: #ffc6ac;
 }
 
-.mystery:hover{
+.mystery:hover {
   background-color: hsl(19, 100%, 76%);
 }
 
-.thriller{
-  background-color: #FFF6E3;
+.thriller {
+  background-color: #fff6e3;
 }
 
-.thriller:hover{
+.thriller:hover {
   background-color: hsl(41, 100%, 87%);
 }
 
-.quotes{
+.quotes {
   border-radius: 20px;
   padding: 50px 30px;
-  background-color: #FFE9D0;
+  background-color: #ffe9d0;
   max-width: 500px;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.799);
   transition: all 0.3s;
 }
 
-.quotes:hover{
+.quotes:hover {
   transform: scale(1.05);
   background-color: hsl(32, 100%, 80%);
 }
 
-.quote{
+.quote {
   font-family: "Tangerine", serif;
   font-size: 2rem;
   margin-bottom: 5px;
@@ -1199,15 +1221,14 @@
   text-align: center;
 }
 
-.quote-writer{
-  font-family:  "poppins";
+.quote-writer {
+  font-family: "poppins";
   font-size: 1.1rem;
   color: #54bab9;
   text-align: center;
-  
 }
 
-.newsletter-content h1{
+.newsletter-content h1 {
   font-family: "Allura", cursive;
   color: #8d5863;
   text-align: center;
@@ -1215,7 +1236,7 @@
   font-weight: 600;
 }
 
-.newsletter-content p{
+.newsletter-content p {
   font-family: "poppins";
   font-size: 1.2rem;
   color: #e5707e;
@@ -1223,7 +1244,7 @@
   margin-bottom: 20px;
 }
 
-.newsletter-form{
+.newsletter-form {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -1231,7 +1252,7 @@
   align-items: center;
 }
 
-.newsletter-input{
+.newsletter-input {
   border: none;
   box-shadow: 0px 0px 5px #e5707e;
   padding: 10px 15px;
@@ -1241,7 +1262,7 @@
   color: #e5707e;
 }
 
-.newsletter-button{
+.newsletter-button {
   border: none;
   cursor: pointer;
   background-color: #ffb4b4;
@@ -1252,47 +1273,46 @@
   color: #8d5863;
 }
 
-.newsletter-button:hover{
+.newsletter-button:hover {
   background-color: hsl(0, 100%, 75%);
 }
 
-.footer-section{
+.footer-section {
   margin-top: 80px;
-  background-color: #F8EAD8;
+  background-color: #f8ead8;
   padding: 80px 25px;
 }
 
-.footer-content{
+.footer-content {
   max-width: 1100px;
   margin: auto;
 }
 
-.footer-top{
+.footer-top {
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
-  
 }
 
-.footer-logo img{
+.footer-logo img {
   width: 80px;
   height: 80px;
 }
 
-.footer-logo{
+.footer-logo {
   font-family: "poppins";
   color: #8f6d6d;
   font-size: 1rem;
 }
 
-.footer-logo>:nth-child(2){
+.footer-logo > :nth-child(2) {
   font-family: "poppins";
   color: #8f6d6d;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.footer-quick-links p{
+.footer-quick-links p {
   font-family: "poppins";
   color: #8f6d6d;
   font-size: 1.2rem;
@@ -1300,25 +1320,24 @@
   margin-bottom: 10px;
 }
 
-.footer-quick-links div{
+.footer-quick-links div {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-family: "poppins";
 }
 
-.footer-quick-links>div>*{
+.footer-quick-links > div > * {
   color: #8f6d6d;
   transition: all 0.3s;
 }
 
-.footer-quick-links>div>*:hover{
+.footer-quick-links > div > *:hover {
   color: #e5707e;
   text-decoration: underline;
 }
 
-
-.footer-social p{
+.footer-social p {
   font-family: "poppins";
   color: #8f6d6d;
   font-size: 1.2rem;
@@ -1326,37 +1345,36 @@
   margin-bottom: 10px;
 }
 
-.social-links{
+.social-links {
   display: flex;
   gap: 5px;
 }
 
-.social-links img{
+.social-links img {
   width: 30px;
   height: 30px;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
-.social-links img:hover{
+.social-links img:hover {
   background-color: hsl(353, 69%, 87%);
-
 }
 
-.footer-newsletter p{
-   font-family: "poppins";
+.footer-newsletter p {
+  font-family: "poppins";
   color: #8f6d6d;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.footer-newsletter div{
+.footer-newsletter div {
   display: flex;
   gap: 10px;
 }
 
-.footer-newsletter input{
+.footer-newsletter input {
   border: none;
   border-radius: 20px;
   width: 200px;
@@ -1364,10 +1382,10 @@
   padding: 8px;
   font-family: "poppins";
   font-size: 0.8rem;
-   color: #8f6d6d;
+  color: #8f6d6d;
 }
 
-.footer-newsletter button{
+.footer-newsletter button {
   cursor: pointer;
   border: none;
   padding: 8px 10px;
@@ -1377,37 +1395,37 @@
   background-color: #ffb4b4;
 }
 
-.footer-newsletter button:hover{
-background-color: hsl(0, 100%, 75%);
+.footer-newsletter button:hover {
+  background-color: hsl(0, 100%, 75%);
 }
 
-.footer-bottom{
+.footer-bottom {
   margin-top: 20px;
   border-top: 1px solid #8f6d6d;
   padding-top: 20px;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   text-align: center;
   font-family: "poppins";
   color: #8f6d6d;
 }
 
-.footer-bottom a{
+.footer-bottom a {
   font-family: "poppins";
   color: #8f6d6d;
 }
 
-.footer-bottom a:hover{
-   color: #e5707e;
+.footer-bottom a:hover {
+  color: #e5707e;
   text-decoration: underline;
 }
 
-.about-page{
+.about-page {
   padding: 100px 20px;
 }
 
-.about-page-content{
+.about-page-content {
   max-width: 1000px;
   margin: auto;
   background-color: #f5eee6;
@@ -1416,12 +1434,12 @@ background-color: hsl(0, 100%, 75%);
   box-shadow: 0px 0px 5px grey;
 }
 
-.about-page-content>:first-child{
+.about-page-content > :first-child {
   border-bottom: 0.8px solid #8d5863;
   padding-bottom: 30px;
 }
 
-.about-heading{
+.about-heading {
   font-family: "Allura", cursive;
   color: #8d5863;
   text-align: center;
@@ -1430,7 +1448,7 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 5px;
 }
 
-.about-welcome{
+.about-welcome {
   font-family: "poppins";
   text-align: center;
   font-size: 1.2rem;
@@ -1438,7 +1456,7 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 10px;
 }
 
-.about-mission{
+.about-mission {
   font-family: "poppins";
   text-align: center;
   font-size: 1.1rem;
@@ -1446,11 +1464,11 @@ background-color: hsl(0, 100%, 75%);
   font-weight: 600;
 }
 
-.contact{
+.contact {
   padding-top: 30px;
 }
 
-.contact>:first-child{
+.contact > :first-child {
   font-family: "poppins";
   color: #8d5863;
   text-align: center;
@@ -1459,37 +1477,35 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 5px;
 }
 
-.contact-info p{
+.contact-info p {
   font-family: "poppins";
   text-align: center;
   font-size: 1.2rem;
   color: #8f6d6d;
 }
 
-.genre-page{
+.genre-page {
   padding: 100px 20px;
 }
 
-.genre-page>*{
+.genre-page > * {
   padding-top: 50px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom: 1px solid #F4BFBF;
+  border-bottom: 1px solid #f4bfbf;
   padding-bottom: 30px;
 }
 
-
-.genre-discription-content{
+.genre-discription-content {
   max-width: 1000px;
   margin: auto;
   padding: 50px 20px;
   padding-bottom: 100px;
   border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.749);
-  
 }
 
-.genre-heading{
+.genre-heading {
   font-family: "Allura", cursive;
   font-size: 3rem;
   font-weight: 600;
@@ -1498,19 +1514,20 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 10px;
 }
 
-.genre-discription{
+.genre-discription {
   font-family: "poppins";
   font-size: 1.1rem;
   text-align: center;
   color: #8f6d6d;
 }
 
-.genre-top-picks-content{
+.genre-top-picks-content {
   max-width: 1500px;
   margin: auto;
 }
 
-.genre-top-picks-heading,.genre-quotes-heading{
+.genre-top-picks-heading,
+.genre-quotes-heading {
   font-family: "Allura";
   color: #8d5863;
   font-size: 3rem;
@@ -1519,12 +1536,12 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 20px;
 }
 
-.genre-top-authors-content{
+.genre-top-authors-content {
   max-width: 1500px;
   margin: auto;
 }
 
-.genre-top-authors-heading{
+.genre-top-authors-heading {
   font-family: "Allura";
   color: #8d5863;
   font-size: 3rem;
@@ -1533,33 +1550,32 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 20px;
 }
 
-.author-card{
+.author-card {
   width: 300px;
   height: 330px;
   border-radius: 20px;
   padding: 25px 10px;
-  background-color: #FFE3E3;
-  border: 1px solid #DBB5B5;
+  background-color: #ffe3e3;
+  border: 1px solid #dbb5b5;
 }
 
-.author-cover{
+.author-cover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   position: relative;
   left: 33%;
   margin-bottom: 10px;
-  
 }
 
-.author-card img{
+.author-card img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.author-name{
+.author-name {
   font-family: "poppins";
   font-size: 1.1rem;
   color: #8d5863;
@@ -1568,7 +1584,7 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 5px;
 }
 
-.author-description{
+.author-description {
   font-family: "poppins";
   font-size: 0.95rem;
   color: #8f6d6d;
@@ -1576,12 +1592,12 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 5px;
 }
 
-.genre-quotes-content{
+.genre-quotes-content {
   max-width: 1500px;
   margin: auto;
 }
 
-.genre-quote{
+.genre-quote {
   font-family: "Tangerine", serif;
   font-size: 1.8rem;
   color: #c96868;
@@ -1590,49 +1606,48 @@ background-color: hsl(0, 100%, 75%);
   margin-bottom: 2px;
 }
 
-.genre-quote-writer{
-  font-family:  "poppins";
+.genre-quote-writer {
+  font-family: "poppins";
   font-size: 1rem;
   color: #54bab9;
   text-align: center;
 }
 
-.genre-quotes-grid{
- display: grid;
- gap: 20px;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.genre-quotes-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-
-.genre-quotes{
-  background-color: #FAEDCE;
+.genre-quotes {
+  background-color: #faedce;
   border-radius: 20px;
   padding: 20px 20px;
   box-shadow: 0px 0px 5px grey;
   transition: all 0.3s;
 }
 
-.genre-quotes:hover{
+.genre-quotes:hover {
   transform: scale(1.05);
   background-color: hsl(32, 100%, 80%);
 }
 
-.genre-did-you-know-content{
+.genre-did-you-know-content {
   max-width: 1000px;
   margin: auto;
-  background-color: #EECEB9;
+  background-color: #eeceb9;
   padding: 50px 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 5px grey;
   transition: all 0.3s;
 }
 
-.genre-did-you-know-content:hover{
+.genre-did-you-know-content:hover {
   transform: scale(1.03);
-   background-color: hsl(24, 61%, 73%);
+  background-color: hsl(24, 61%, 73%);
 }
 
-.genre-did-you-know-heading{
+.genre-did-you-know-heading {
   font-family: "Allura", cursive;
   font-size: 3rem;
   font-weight: 600;
@@ -1641,18 +1656,106 @@ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   color: #e5707e;
 }
 
-.genre-did-you-know{
+.genre-did-you-know {
   font-family: "poppins";
   font-size: 1.1rem;
   text-align: center;
   color: #8d5863;
 }
 
+.genre-did-you-know-section {
+  border-bottom: none;
+}
+
+.small-screen-menu {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  right: 0%;
+  top: 74px;
+  z-index: 21;
+  background-color: #f8ead8;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-open {
+  transform: translateX(0%);
+}
 
 
+.small-screen-menu > :not(:nth-child(3)) {
+  border-bottom: 1px solid #8c7b75;
+  padding: 10px;
+  font-family: "poppins";
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8c7b75;
+  transition: all 0.3s;
+}
 
+.genres-small-screen {
+  border-bottom: 1px solid #8c7b75;
+}
 
+.genres-small-screen p {
+  font-family: "poppins";
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8c7b75;
+  transition: all 0.3s;
+  padding: 10px 10px;
+}
 
+.genres-small-screen p:hover {
+  background-color: #f3c5c5;
+}
 
+.genres-small-screen-box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+}
 
+.small-screen-genre-link {
+  font-family: "poppins";
+  color: #8c7b75;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #8c7b75;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  transition: all 0.3s;
+}
 
+.small-screen-genre-link:hover {
+  background-color: #f3c5c5;
+}
+
+.genres-small-screen-box > :last-child {
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+
+.small-screen-menu > :not(:nth-child(3)):hover {
+  background-color: #f3c5c5;
+}
+
+.small-screen-menu img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (width<750px) {
+  .navbar-content-big-screen {
+    display: none;
+  }
+
+  .navbar-content-small-screen {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import Book from "./Book";
 import CartItem from "./CartItem";
 
-const SearchPage = ({ searchValue, setCartItems, cartItems,handleRemove }) => {
+const SearchPage = ({
+  searchValue,
+  setCartItems,
+  cartItems,
+  handleRemove,
+}) => {
   let [searchedBooks, setSearchedBooks] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
   console.log(searchedBooks);
-  
 
   useEffect(() => {
     if (searchValue) {
@@ -85,4 +89,3 @@ let generatePrices = (bookId) => {
     dp: String(discountedPrice),
   };
 };
-

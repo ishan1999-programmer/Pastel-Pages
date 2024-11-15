@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GenreDisplay from "./GenreDisplay";
 
-const Genre = ({ genre }) => {
-  return <GenreDisplay currentGenre={genreObject[`${genre}`]} />;
+const Genre = ({ genre}) => {
+  return <GenreDisplay currentGenre={genreObject[`${genre}`]}/>;
 };
 
 export default Genre;

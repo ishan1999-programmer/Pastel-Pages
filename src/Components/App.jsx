@@ -11,6 +11,7 @@ import Cart from "./Cart";
 import CreateAccount from "./CreateAccount";
 import { useEffect, useState } from "react";
 import SearchPage from "./SearchPage";
+import SmallScreenMenu from "./SmallScreenMenu";
 
 export default function App() {
   let [genre, setGenre] = useState(() => {
@@ -28,9 +29,17 @@ export default function App() {
     return storedCartItems ? JSON.parse(storedCartItems) : [];
   });
 
+  let [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 750) {
+      setIsMenuOpen(false);
+    }
+  });
+
   useEffect(() => {
     localStorage.setItem("genre", genre);
-  },[genre])
+  }, [genre]);
 
   useEffect(() => {
     localStorage.setItem("searchValue", searchValue);
@@ -67,8 +76,18 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
-          <HomePage setSearchValue={setSearchValue} setGenre={setGenre} />
+          <HomePage
+            setSearchValue={setSearchValue}
+            setGenre={setGenre}
+          />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </>
       ),
     },
@@ -80,12 +99,19 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
           <SearchPage
             searchValue={searchValue}
             setCartItems={setCartItems}
             cartItems={cartItems}
             handleRemove={handleRemove}
+          />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
           />
         </>
       ),
@@ -98,8 +124,17 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
-          <Genre genre={genre} />
+          <Genre
+            genre={genre}
+          />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </>
       ),
     },
@@ -111,8 +146,15 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
           <About />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </>
       ),
     },
@@ -124,6 +166,8 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
           <Cart
             cartItems={cartItems}
@@ -131,6 +175,11 @@ export default function App() {
             handleRemove={handleRemove}
             changeQuantity={changeQuantity}
             cartSize={cartSize}
+          />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
           />
         </>
       ),
@@ -143,8 +192,16 @@ export default function App() {
             setGenre={setGenre}
             setSearchValue={setSearchValue}
             cartSize={cartSize}
+            isMenuOpen={isMenuOpen}
+            setIsMenuOpen={setIsMenuOpen}
           />
-          <CreateAccount />
+          <CreateAccount
+          />
+          <SmallScreenMenu
+            isMenuOpen={isMenuOpen}
+            setGenre={setGenre}
+            setIsMenuOpen={setIsMenuOpen}
+          />
         </>
       ),
     },

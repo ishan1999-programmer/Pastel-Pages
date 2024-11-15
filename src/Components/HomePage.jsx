@@ -6,8 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css/bundle";
 
-const HomePage = ({ setSearchValue, setGenre }) => {
+const HomePage = ({ setSearchValue, setGenre}) => {
   let [inputValue, setInputValue] = useState("");
+
   return (
     <div className="homepage">
       <div className="hero-section">

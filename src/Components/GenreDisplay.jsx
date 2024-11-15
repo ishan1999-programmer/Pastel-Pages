@@ -5,7 +5,7 @@ import "swiper/css/bundle";
 import { Navigation, Keyboard, Grid } from "swiper/modules";
 import AuthorCard from "./AuthorCard";
 
-export default function GenreDisplay({ currentGenre }) {
+export default function GenreDisplay({ currentGenre}) {
   let topPicksArray = currentGenre.genreTopPicks.map((val) => (
     <SwiperSlide>
       <BookCard

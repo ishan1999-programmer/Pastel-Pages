@@ -10,7 +10,6 @@ const CreateAccount = () => {
   });
 
   let [isFormValid, setIsFormValid] = useState(false);
-  
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,7 +18,6 @@ const CreateAccount = () => {
         ...userDetails,
         fullname: { ...userDetails.fullname, isValid: false },
       });
-      
     } else if (!isEmailValid(userDetails.email.text)) {
       setUserDetails({
         ...userDetails,
@@ -43,8 +41,7 @@ const CreateAccount = () => {
           isValid: false,
         },
       });
-    }
-    else {
+    } else {
       setIsFormValid(true);
     }
   }
@@ -55,7 +52,7 @@ const CreateAccount = () => {
           🎉 Account Created Successfully! 🎉
         </p>
         <p className="form-submitted-text1">
-          Welcome to Pastel Pages,<p>{ userDetails.fullname.text}</p>
+          Welcome to Pastel Pages,<p>{userDetails.fullname.text}</p>
         </p>
         <p className="form-submitted-text2">
           We’re excited to have you here. Let’s explore our collection.
@@ -100,7 +97,6 @@ const CreateAccount = () => {
             “Please only use letters and spaces, between 2 and 50 characters.
             Avoid numbers or special characters.”
           </p>
-
           <label htmlFor="email">Email ID</label>
           <input
             type="email"
@@ -121,7 +117,6 @@ const CreateAccount = () => {
           >
             "Please enter a valid Email ID"
           </p>
-
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -147,7 +142,6 @@ const CreateAccount = () => {
             “Password must be at least 8 characters, including one uppercase
             letter, one lowercase letter, one digit, and one special character.”
           </p>
-
           <label htmlFor="confirm-password">Confirm Password</label>
           <input
             type="password"
@@ -156,7 +150,10 @@ const CreateAccount = () => {
             onChange={(e) =>
               setUserDetails((userDetails) => ({
                 ...userDetails,
-                confirmPassword: {...userDetails.confirmPassword, text: `${e.target.value}` },
+                confirmPassword: {
+                  ...userDetails.confirmPassword,
+                  text: `${e.target.value}`,
+                },
               }))
             }
           />
@@ -170,7 +167,6 @@ const CreateAccount = () => {
           >
             “Passwords do not match. Please re-enter.”
           </p>
-
           <button
             type="submit"
             value="submit-button"
@@ -200,20 +196,26 @@ const CreateAccount = () => {
 export default CreateAccount;
 
 function isFullnameValid(fullname) {
-  if (fullname.length < 2 || fullname.length > 50 || (!(/^[A-Za-z\s]+$/.test(fullname)))) {
+  if (
+    fullname.length < 2 ||
+    fullname.length > 50 ||
+    !/^[A-Za-z\s]+$/.test(fullname)
+  ) {
     return false;
   }
   return true;
 }
 
 function isEmailValid(email) {
-  return (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function isPasswordValid(password) {
-  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+    password
+  );
 }
 
-function isConfirmPasswordValid(confirmPassword,password) {
-  return(confirmPassword===password)
+function isConfirmPasswordValid(confirmPassword, password) {
+  return confirmPassword === password;
 }
