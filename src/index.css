@@ -287,7 +287,7 @@
 .cart-content {
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 8px;
 }
 
 .cart-content h1 {
@@ -299,6 +299,7 @@
 .cart-content-box {
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
 }
@@ -503,14 +504,16 @@
 }
 
 .pay-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 30px;
-  margin-left: 15px;
   cursor: pointer;
   border: none;
   border-radius: 30px;
   font-family: "poppins";
   color: #8f6d6d;
-  font-size: 18px;
+  font-size: 1.2rem;
   padding: 15px 20px;
   background-color: #ffb4b4;
 }
@@ -669,7 +672,9 @@
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
   padding-top: 100px;
 }
 
@@ -719,7 +724,7 @@
 .form-fields input {
   padding: 10px 15px;
   border: none;
-  width: 80%;
+  width: 600px;
   height: 40px;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -809,6 +814,9 @@
   padding: 50px 30px;
   border-radius: 20px;
   box-shadow: 0px 0px 15px hsl(0, 0%, 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-submitted-heading {
@@ -821,17 +829,12 @@
 }
 
 .form-submitted-text1 {
+  margin-bottom: 5px;
+  display: inline;
   font-family: "poppins";
   font-size: 1.5rem;
   color: #8f6d6d;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-.form-submitted-text1 p {
-  color: #e5707e;
+  text-align: center;
 }
 
 .form-submitted-text2 {
@@ -850,8 +853,7 @@
   background-color: #ffb4b4;
   padding: 15px 20px;
   border-radius: 20px;
-  position: relative;
-  left: 10%;
+  text-align: center;
 }
 
 .form-submitted-link:hover {
@@ -873,7 +875,6 @@
 
 .hero-section {
   padding: 100px 20px;
-  min-height: 500px;
   background-image: url("hero-image.png");
   background-position: center;
   background-size: cover;
@@ -934,7 +935,7 @@
   border-bottom-left-radius: 30px;
   padding: 5px 15px;
   font-size: 1.4rem;
-  width: 400px;
+  width: 75%;
   color: #ff9494;
 }
 
@@ -945,7 +946,7 @@
   background-color: #ffb4b4;
   padding: 3px 10px;
   border-radius: 20px;
-  width: 120px;
+  width: 23%;
   text-align: center;
   transition: all 0.3s;
 }
@@ -1103,6 +1104,8 @@
 
 .explore-genres-content {
   max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .bestsellers-content h1,
@@ -1378,8 +1381,8 @@
   border: none;
   border-radius: 20px;
   width: 200px;
-  height: 30px;
-  padding: 8px;
+  height: 40px;
+  padding: 10px;
   font-family: "poppins";
   font-size: 0.8rem;
   color: #8f6d6d;
@@ -1388,7 +1391,8 @@
 .footer-newsletter button {
   cursor: pointer;
   border: none;
-  padding: 8px 10px;
+  height: 40px;
+  padding: 10px;
   font-family: "poppins";
   border-radius: 20px;
   color: #8f6d6d;
@@ -1749,6 +1753,21 @@
   height: 30px;
 }
 
+@media (width<=946px) {
+  .cart-content-box-right{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (width<=850px) {
+  .explore-genres-grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 160px);
+  }
+}
+
 @media (width<750px) {
   .navbar-content-big-screen {
     display: none;
@@ -1758,4 +1777,366 @@
     display: flex;
     align-items: center;
   }
+
+  .hero-section h1{
+    font-size: 4rem;
+  }
+
+  .create-account-form{
+    width: 600px;
+  }
+
+  .form-fields input{
+    width: 500px;
+  }
+
 }
+
+@media (width<=650px) {
+  .about-heading{
+    font-size: 3rem;
+  }
+
+  .about-welcome{
+    font-size: 1rem;
+  }
+
+  .about-mission{
+    font-size: 0.8rem;
+  }
+
+  .contact > :first-child{
+    font-size: 1.5rem;
+  }
+
+  .contact-info p{
+    font-size: 1rem;
+  }
+
+  .create-account-form{
+    width: 500px;
+  }
+
+  .form-fields input{
+    width: 400px;
+  }
+}
+
+
+@media (width<=570px) {
+  .hero-section h1{
+    font-size: 3rem;
+  }
+
+  .hero-section p{
+    font-size: 1rem;
+  }
+
+  .searchbar-box{
+    width: 450px;
+    height: 40px;
+  }
+
+  .searchbar-box input {
+    font-size: 1rem;
+    width: 78%;
+  }
+
+  .search{
+    font-size: 1rem;
+    padding: 3px;
+    width: 20%;
+  }
+
+  .genres-homepage > :first-child{
+    font-size: 1.8rem;
+  }
+
+  .genres-homepage > :nth-child(2){
+    font-size: 1.1rem;
+  }
+
+  .form-quote{
+    font-size: 1.1rem;
+  }
+
+  .form-quote-writer{
+    font-size: 0.9rem;
+  }
+
+  .form-welcome-message{
+    font-size: 1.5rem;
+  }
+}
+
+@media (width<=528px) {
+  .form-submitted-heading{
+    font-size: 1.8rem;
+  }
+
+  .form-submitted-text1{
+    font-size: 1.3rem;
+  }
+
+  .form-submitted-text2{
+    font-size: 1rem;
+  }
+
+  .form-submitted-link{
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (width<=520px) {
+  .create-account-form{
+    width: 400px;
+  }
+
+  .form-fields input{
+    width: 300px;
+  }
+
+  .alternate-options-buttons{
+    gap: 50px;
+  }
+
+  .cart-empty-page-heading{
+    font-size: 2rem;
+  }
+
+  .cart-empty-page-text1{
+    font-size: 1.2rem;
+  }
+
+  .cart-empty-page-text2{
+    font-size: 1rem;
+  }
+
+  .shop-books-link{
+    font-size: 1.1rem;
+    width: 170px;
+  height: 50px;
+  }
+
+  .shop-books-link img{
+    width: 25px;
+    height: 25px;
+  }
+
+
+
+
+}
+
+
+@media (width<=460px) {
+  .hero-section h1{
+    font-size: 2.8rem;
+  }
+
+  .hero-section p{
+    font-size: 1rem;
+  }
+
+  .searchbar-box{
+    width: 320px;
+    height: 40px;
+  }
+
+  .searchbar-box input {
+    font-size: 1rem;
+    width: 75%;
+  }
+
+  .search{
+    font-size: 0.9rem;
+    padding: 4px;
+    width: 23%;
+  }
+
+  .explore-genres-grid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 125px);
+  }  
+
+  .form-submitted-link{
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+
+
+@media (width<=430px) {
+  .newsletter-input{
+    width: 320px;
+    padding: 8px 10px;
+  }
+
+  .newsletter-button{
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  .about-heading{
+    font-size: 2.5rem;
+  }
+
+  .about-welcome{
+    font-size: 0.8rem;
+  }
+
+  .about-mission{
+    font-size: 0.6rem;
+  }
+
+  .contact > :first-child{
+    font-size: 1.2rem;
+  }
+
+  .contact-info p{
+    font-size: 0.8rem;
+  }
+
+  .create-account-form{
+    width: 320px;
+  }
+
+  .form-fields input{
+    width: 240px;
+    font-size: 1rem;
+    height: 35px;
+  }
+
+  .alternate-options-buttons{
+    gap: 20px;
+  }
+
+  .form-quote{
+    font-size: 1rem;
+  }
+
+  .form-quote-writer{
+    font-size: 0.8rem;
+  }
+
+  .form-welcome-message{
+    font-size: 1.3rem;
+  }
+
+  .form-fields label{
+    font-size: 1rem;
+  }
+
+  .create-account-button{
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin-top: 10px;
+  }
+
+  .alternate-options-text{
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .google-button,
+.apple-button{
+  font-size: 1rem;
+  padding: 8px 10px;
+}
+
+.alternate-options-buttons img{
+  width: 25px;
+  height: 25px;
+}
+}
+
+@media (width<=406px) {
+  .form-submitted-heading{
+    font-size: 1.5rem;
+  }
+
+  .form-submitted-text1{
+    font-size: 1.1rem;
+  }
+
+  .form-submitted-text2{
+    font-size: 0.9rem;
+  }
+
+  .form-submitted-link{
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (width<=400px) {
+  .navbar-logo{
+    font-size: 1.2rem;
+  }
+
+  .bestsellers-content h1,
+.recommendation-content h1,
+.explore-genres-content h1,
+.quotes-content h1{
+  font-size: 3rem;
+}
+
+.newsletter-input{
+    width: 250px;
+    padding: 8px 10px;
+  }
+}
+
+@media (width<=375px) {
+  .newsletter-content h1{
+    font-size: 2rem;
+  }
+
+  .newsletter-content p{
+    font-size: 1rem;
+  }
+}
+
+@media (width<=340px) {
+  .navbar-logo{
+    font-size: 1rem;
+  }
+
+  .hero-section h1{
+    font-size: 2.5rem;
+  }
+
+  .hero-section p{
+    font-size: 0.9rem;
+  }
+
+  .searchbar-box{
+    width: 300px;
+    height: 40px;
+  }
+
+  .searchbar-box input {
+    font-size: 0.9rem;
+    width: 75%;
+  }
+
+  .search{
+    font-size: 0.8rem;
+    padding: 4px;
+    width: 23%;
+  }
+
+  .create-account-form{
+    width: 300px;
+  }
+
+  .form-fields input{
+    width: 220px;
+    font-size: 1rem;
+    height: 35px;
+  }
+}
+
+

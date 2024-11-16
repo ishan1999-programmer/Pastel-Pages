@@ -48,7 +48,7 @@ const HomePage = ({ setSearchValue, setGenre}) => {
             autoplay={{ delay: 0 }}
             navigation={true}
             freeMode={true}
-            slidesPerView={"1.2"}
+            slidesPerView={"1"}
             breakpoints={{
               1350: {
                 slidesPerView: 5,
@@ -138,7 +138,7 @@ const HomePage = ({ setSearchValue, setGenre}) => {
             navigation={true}
             freeMode={true}
             grabCursor={true}
-            slidesPerView={"1.2"}
+            slidesPerView={"1"}
             breakpoints={{
               1350: {
                 slidesPerView: 5,

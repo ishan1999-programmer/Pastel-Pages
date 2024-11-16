@@ -48,17 +48,15 @@ const CreateAccount = () => {
   return isFormValid ? (
     <div className="form-submitted-page">
       <div className="form-submitted-content">
-        <p className="form-submitted-heading">
-          🎉 Account Created Successfully! 🎉
-        </p>
+        <p className="form-submitted-heading">Account Created Successfully!</p>
         <p className="form-submitted-text1">
-          Welcome to Pastel Pages,<p>{userDetails.fullname.text}</p>
+          Welcome to Pastel Pages, <b>{userDetails.fullname.text}</b>
         </p>
         <p className="form-submitted-text2">
           We’re excited to have you here. Let’s explore our collection.
         </p>
         <Link to="/" className="form-submitted-link">
-          “Let’s head to the homepage and explore!”
+          Let’s head to the homepage and explore!
         </Link>
       </div>
     </div>
